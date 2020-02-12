@@ -25,43 +25,23 @@ public class Order {
 	 * 
 	 */
 	private double cost;
-	/**
-	 * @quantity the quantity of the item. 
-	 * 
-	 * 
-	 */
-	private int quantity;
+	
 	
 	/**
 	 * The constructor to initialize the variable class.
 	 * 
 	 * 
 	 */
-	public Order(int id,int fk_customer,double price,int quantity) {
+	public Order(int id,int fk_customer,double price) {
 		this.orders_id=id;
 		this.fk_customer_id=fk_customer;
 		this.cost=price;
-		this.quantity=quantity;
+	
 		
 		
 	} 
     
-	/**
-	 * this method return the quantity.
-	 * 
-	 * 
-	 */
-	public int getQuantity() {
-		return quantity;
-	}
-	/**
-	 * this method assign a value to quantity.
-	 * 
-	 * 
-	 */
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+	
 	/**
 	 * this method return the order_id.
 	 * 

@@ -40,7 +40,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 		      String query = "insert into ordersItems (fk_orders_id,fk_items_id,discountPrice,quantity) values (?, ?,?,?)";
 		      // create the mysql insert preparedstatement
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
-		      preparedStmt.setInt(1,t.getFk_orders());
+		      preparedStmt.setInt(1,t.getFk_orders()); 
 		      preparedStmt.setInt(2, t.getFk_items());
 		      preparedStmt.setDouble(3, t.getDiscount());
 		      preparedStmt.setInt(4, t.getQuantity());
@@ -107,21 +107,20 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 	 * this method retreive the list of order from order table.
 	 * 
 	 */
-	public List<Order> getInfoOrder(){
-		ArrayList<Order> orders = new ArrayList<Order>();
+	public List<OrdersItems> getInfoOrder(){
+		ArrayList<OrdersItems> orders = new ArrayList<OrdersItems>();
 		try {
 					
 					Statement statement = connection.createStatement();
-					ResultSet resultSet = statement.executeQuery("select * from orders ");
+					ResultSet resultSet = statement.executeQuery(" select oi.ordersItems_id,o.cost , oi.quantity from orders o inner join ordersItems oi on   o.orders_id=oi.fk_orders_id; ");
 						
 					while (resultSet.next()) {
-					     int ordrer_id = resultSet.getInt("orders_id");
-					     int fk_customer = resultSet.getInt("fk_customer_id");
+					     int id = resultSet.getInt("ordersItems_id");
+					     double  price= resultSet.getInt("cost");
 					     int quantity = resultSet.getInt("quantity");
-						 double cost= resultSet.getDouble("cost");
 						
 						
-						orders.add(new Order(ordrer_id, fk_customer, cost,quantity));
+						orders.add(new OrdersItems(id, 0, 0,quantity,price));
 					}
 		} catch (Exception e) {
 					 System.out.println(e.getMessage());

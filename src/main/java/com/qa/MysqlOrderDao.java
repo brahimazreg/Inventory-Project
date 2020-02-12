@@ -31,7 +31,7 @@ public class MysqlOrderDao implements Dao<Order>{
 	public MysqlOrderDao()  throws SQLException{
 	
 	this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
-	//this.connection=DriverManager.getConnection("jdbc:mysql://localhost/IMSdb","root","user123");
+	
 }
 	/**
 	 * Method that create an order.
@@ -40,23 +40,22 @@ public class MysqlOrderDao implements Dao<Order>{
 	public void create(Order t) {
 
 		try {
-			// the mysql insert statement
-		      String query = "insert into orders (fk_customer_id,quantity,cost) values (?,?,?)";
+			
+		      String query = "insert into orders (fk_customer_id,cost) values (?,?)";
 		      // create the mysql insert preparedstatement
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setInt(1, t.getFk_customer_id());
-		      preparedStmt.setInt(2, t.getQuantity());
-		      preparedStmt.setDouble(3, t.getCost());
+		      preparedStmt.setDouble(2, t.getCost());
 		      
-		   // execute the preparedstatement
+		  
 		      preparedStmt.executeUpdate();
 		      }catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			
 
 		}
 		 
-	} 
+	}  
 	/**
 	 * Method that read all orders from order table..
 	 * 
@@ -74,7 +73,7 @@ public class MysqlOrderDao implements Dao<Order>{
 				int fk_customer = resultSet.getInt("fk_customer_id");
 				int quantity=resultSet.getInt("quantity");
 				double price= resultSet.getDouble("cost");
-				orders.add(new Order(id, fk_customer, price,quantity));
+				orders.add(new Order(id, fk_customer, price));
 				
 				
 			}
@@ -92,12 +91,11 @@ public class MysqlOrderDao implements Dao<Order>{
 	public void update(Order t) {
 		try {
 			// the mysql insert statement
-		      String query = "update orders set quantity =? ,  cost=? where orders_id=?";
+		      String query = "update orders set cost=? where orders_id=?";
 		      // create the mysql insert preparedstatement
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
-		      preparedStmt.setInt(1, t.getQuantity());
-		      preparedStmt.setDouble(2, t.getCost());
-		      preparedStmt.setInt(3, t.getOrders_id());
+		      preparedStmt.setDouble(1, t.getCost());
+		      preparedStmt.setInt(2, t.getOrders_id());
 		      
 		      
 		   // execute the preparedstatement
