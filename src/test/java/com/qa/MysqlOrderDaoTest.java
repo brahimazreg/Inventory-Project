@@ -4,9 +4,11 @@ import static org.junit.Assert.*;
 
 import java.sql.SQLException;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class MysqlOrderDaoTest {
+
 
 	@Test
 	public void testCreate() {
@@ -22,11 +24,13 @@ public class MysqlOrderDaoTest {
 		}
 	}
 
+	@Ignore
 	@Test
 	public void testReadAll() {
 		fail("Not yet implemented");
 	}
 
+	
 	@Test
 	public void testUpdate() {
 		try {
@@ -41,6 +45,7 @@ public class MysqlOrderDaoTest {
 		}
 	}
 
+	@Ignore
 	@Test
 	public void testDelete() {
 		fail("Not yet implemented");
