@@ -10,12 +10,24 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * This class allow the communication with the database.
+ * Implements the Dao interface.
+ * 
+ */
 public class MysqlCustomerDao implements Dao<Customer>{
-	
+	/**
+	 * @connection variable used to make connection with the database..
+	 * 
+	 */	
 private Connection connection;
 	
 	
-	
+/**
+ * Constructor initialise the connection variable
+ * 
+ */	
 	public MysqlCustomerDao()  throws SQLException{
 		
 		this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
@@ -24,7 +36,13 @@ private Connection connection;
 	
 	//private Connection connection= DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","root","root");
 	
+	/**
+	 * Method that update a customer.
+	 * 
+	 */
+	
 	public void update(Customer t) {
+
 		// TODO Auto-generated method stub
 		try {
 			// the mysql insert statement
@@ -45,6 +63,11 @@ private Connection connection;
 		
 	}// end update 
 
+	/**
+	 * This method delete a customer.
+	 * 
+	 */
+	
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		
@@ -64,7 +87,10 @@ private Connection connection;
 		}
 		
 	}// end delete
-      
+	/**
+	 * This method create a customer.
+	 * 
+	 */
     public void create(Customer t) {
 		 // PreparedStatement ps =null;
 		 // ResultSet rs = null;
@@ -87,8 +113,13 @@ private Connection connection;
 			
 		
 	}// end create
- 
-public List<Customer> readAll() {
+    
+    /**
+	 * This method read all customer .
+	 * 
+	 */
+    
+    public List<Customer> readAll() {
 	ArrayList<Customer> customers = new ArrayList<Customer>();
 	try {
 		
@@ -108,7 +139,10 @@ public List<Customer> readAll() {
 	return customers;
 }// end readAll
 
-    
+    /**
+	 * This method retreive the last id in a table
+	 * 
+	 */
     public int getLastId() {
     	
     	 int id=0 ;

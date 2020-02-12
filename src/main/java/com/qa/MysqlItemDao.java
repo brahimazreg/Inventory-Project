@@ -9,15 +9,31 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class allow the communication with the database.
+ * Implements the Dao interface.
+ * 
+ */
 public class MysqlItemDao implements Dao<Item>{
-	
+	/**
+	 * @connection variable used to make connection with the database..
+	 * 
+	 */	
 	private Connection connection;
+	
+	/**
+	 * Constructor initialise the connection variable
+	 * 
+	 */	
 		public MysqlItemDao()  throws SQLException{
 		
 		this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
 		//this.connection=DriverManager.getConnection("jdbc:mysql://localhost/IMSdb","root","user123");
 	}
-	
+		/**
+		 * Method that create an item.
+		 * 
+		 */
 
 	public void create(Item t) {
 		// TODO Auto-generated method stub
@@ -41,7 +57,10 @@ public class MysqlItemDao implements Dao<Item>{
 		}
 		  
 	} 
-
+	/**
+	 * This method rea all record in item table.
+	 * 
+	 */
 	public List<Item> readAll() {
 		ArrayList<Item> items = new ArrayList<Item>();
 		try {
@@ -66,7 +85,11 @@ public class MysqlItemDao implements Dao<Item>{
 		
 	
 	} 
-
+	/**
+	 * Method that update an itemer.
+	 * 
+	 */
+	
 	public void update(Item t) {
 		
 		try {
@@ -89,6 +112,10 @@ public class MysqlItemDao implements Dao<Item>{
 				
 	}//end update item
 
+	/**
+	 * this method delete an item from item table
+	 * 
+	 */
 	public void delete(int id) {
 
 		try {
@@ -107,43 +134,13 @@ public class MysqlItemDao implements Dao<Item>{
 		}
 		
 	}// end delete item
-	//*********************************************
-	/*
-	public List<Item> getInfoItem(int id) {
-		ArrayList<Item> infoItems = new ArrayList<Item>();
-		
-		try {
-			
-				//Statement statement = connection.createStatement();
-				String query ="select items_name,price from Items where items_id=?";
-				PreparedStatement preparedStmt= connection.prepareStatement(query);
-				preparedStmt.setInt(1,id);
-				
-				ResultSet rs = preparedStmt.executeQuery();
-				while (rs.next()) {
-					 String name =rs.getString("items_name") ;
-				     double price = rs.getDouble("price");
-				     infoItems.add(new Item(id, name, price));
-				}
-
-				
-			
-				
-				
-					
-					
-				
-			} catch (Exception e) {
-				 System.out.println(e.getMessage());
-			} 
-			
-		
-		return infoItems;
-	}
-	 */
+	
 	
 	//********************************
-	
+	/**
+	 * this method get the id of the last reord inserted.
+	 * 
+	 */
 	 public int getLastId() {
 	    	
     	 int id=0 ;

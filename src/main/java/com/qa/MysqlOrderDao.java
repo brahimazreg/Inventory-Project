@@ -1,6 +1,8 @@
 package com.qa;
 
 import java.sql.Connection;
+
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,15 +11,32 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class allow the communication with the database qnd access to the order table.
+ * Implements the Dao interface.
+ * 
+ */
+
 public class MysqlOrderDao implements Dao<Order>{
-	
+	/**
+	 * @connection variable used to make connection with the database..
+	 * 
+	 */
 	private Connection connection;
+	/**
+	 * Constructor initialise the connection variable
+	 * 
+	 */	
+	
 	public MysqlOrderDao()  throws SQLException{
 	
 	this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
 	//this.connection=DriverManager.getConnection("jdbc:mysql://localhost/IMSdb","root","user123");
 }
-
+	/**
+	 * Method that create an order.
+	 * 
+	 */
 	public void create(Order t) {
 
 		try {
@@ -36,9 +55,13 @@ public class MysqlOrderDao implements Dao<Order>{
 			 //System.err.println(e.getMessage());
 
 		}
-		
+		 
 	} 
-
+	/**
+	 * Method that read all orders from order table..
+	 * 
+	 */
+	
 	public List<Order> readAll() {
 	     
 		ArrayList<Order> orders = new ArrayList<Order>();
@@ -61,7 +84,11 @@ public class MysqlOrderDao implements Dao<Order>{
 		return orders;
 	
 	}
-
+    
+	/**
+	 * Method that update a record in the order table.
+	 * 
+	 */
 	public void update(Order t) {
 		try {
 			// the mysql insert statement
@@ -89,7 +116,10 @@ public class MysqlOrderDao implements Dao<Order>{
 		
 	}
 
-	
+	/**
+	 * Method get the last id in order table .
+	 * 
+	 */
 	 public int getLastId() {
 	    	
     	 int id=0 ;

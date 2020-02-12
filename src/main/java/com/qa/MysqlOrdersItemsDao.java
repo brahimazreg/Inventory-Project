@@ -9,15 +9,31 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * This class allow the communication with the database.
+ * Implements the Dao interface.
+ * 
+ */
 public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
-    
+	/**
+	 * @connection variable used to make connection with the database..
+	 * 
+	 */	
 	private Connection connection;
+	/**
+	 * Constructor initialise the connection variable
+	 * 
+	 */
 	public MysqlOrdersItemsDao()  throws SQLException{
 	
 	this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
 	//this.connection=DriverManager.getConnection("jdbc:mysql://localhost/IMSdb","root","user123");
 }
-	
+	/**
+	 * Method that create a record in OrderItem table.
+	 * 
+	 */
 	public void create(OrdersItems t) {
 		try {
 			// the mysql insert statement
@@ -39,6 +55,12 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 		
 	} 
 
+
+	
+	/**
+	 * Method read all record  in ordersItems taqble.
+	 * 
+	 */
 	public List<OrdersItems> readAll() {
 		
 		ArrayList<OrdersItems> ordersItems = new ArrayList<OrdersItems>(); 
@@ -64,16 +86,27 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 		
 	} 
 
+	/**
+	 * Method update a record in the ordersItems taqble.
+	 * 
+	 */
 	public void update(OrdersItems t) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/**
+	 * Method delete a record in the ordersItems taqble.
+	 * 
+	 */
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		
 	}
-	
+	/**
+	 * this method retreive the list of order from order table.
+	 * 
+	 */
 	public List<Order> getInfoOrder(){
 		ArrayList<Order> orders = new ArrayList<Order>();
 		try {

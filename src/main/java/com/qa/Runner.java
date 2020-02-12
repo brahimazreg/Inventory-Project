@@ -4,14 +4,18 @@ package com.qa;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
-//import javax.swing.JOptionPane;
+
 public class Runner {
 	
 public static void main(String[] args)  throws SQLException{
 	 
-	 // Main menu 
+	 
 	
-	
+	/**
+	 * the main menu of the application
+	 * 
+	 * 
+	 */
 		int option;
 		java.util.Scanner op= new  java.util.Scanner(System.in);
 		do {
@@ -36,29 +40,19 @@ public static void main(String[] args)  throws SQLException{
 	     
 	     
 	     
-	     System.out.println("test");
 	     
-	     // just to test last auto_increment
-	    // test to get the last id inserted into cutomer table
-	     /*
-	     MysqlCustomerDao dao = new MysqlCustomerDao();
-	     System.out.println(dao.readAll().get(dao.readAll().size()-1).getFirstName());
-	     System.out.println("size  " + dao.readAll().size());
-	     System.out.println(dao.getLastId()) ;
-	    
-	*/
-	//   test to get the last id inserted into cutomer table
-	/*
-	       MysqlOrderDao dao = new MysqlOrderDao();
-           System.out.println(dao.readAll().get(dao.getLastId()-1).getFk_customer_id());
-           System.out.println("size  " + dao.readAll().size());
-           System.out.println(dao.getLastId()) ;
-	*/
 	      
 	     
 }// end method main   
 
 //******************************** sub menu 
+
+
+/**
+ * this function manage the submenu customer, submenu item , submenu order
+ * 
+ * 
+ */
 public static void menu(String str){
 	//***************     manage customer ************************
 		if(str.equals("customer")){ 
@@ -211,11 +205,17 @@ public static void menu(String str){
 
 
 
-//************************  end sub menu
+//************************  end sub menu  *****************************************
 
 
 //---------------------  Manage  customers   ------------------------------------------------  
-      
+/**
+ * this method insert a new customern
+ * 
+ * 
+ */      
+
+
        public static  void insertCustomer()  { 
     	   try {
 			MysqlCustomerDao dao = new MysqlCustomerDao();
@@ -239,6 +239,12 @@ public static void menu(String str){
        }
     	    
        } // end insert
+       /**
+        * this method delete a customer
+        * 
+        * 
+        */ 
+     
        
        public static void  deleteCustomer() {
     	     showCustomers();
@@ -257,6 +263,12 @@ public static void menu(String str){
     	    
     	   
        } // end delete
+   
+       /**
+        * this method shows all customers
+        * 
+        * 
+        */ 
        public static void showCustomers() {
     	 
     	  
@@ -274,6 +286,12 @@ public static void menu(String str){
    		
    		}// end of show customers
        
+     
+       /**
+        * this method update a customer
+        * 
+        * 
+        */ 
        public static void  updateCustomer() {
   	          showCustomers();
   	     try {
@@ -305,6 +323,11 @@ public static void menu(String str){
        
        //--------------------- Manage items   ------------------------------------------------     
        
+       /**
+        * this method insert a new item
+        * 
+        * 
+        */ 
        
        public static  void insertItem()  { 
     	   try {
@@ -333,7 +356,11 @@ public static void menu(String str){
     	    
        } // end insert item
        
-       
+       /**
+        * this method show all items
+        * 
+        * 
+        */ 
        public static void showItems() {
       	 
      	  
@@ -350,6 +377,12 @@ public static void menu(String str){
       		 
       		}// end of show items
 
+       /**
+        * this method update an item
+        * 
+        * 
+        */ 
+       
        public static void updateItem() {
     	   showItems();
     	   try {
@@ -381,6 +414,11 @@ public static void menu(String str){
     	   
        }// end update item
        
+       /**
+        * this method delete an item
+        * 
+        * 
+        */ 
        public static void deletItem() {
     	   
     	   showItems();
@@ -400,6 +438,11 @@ public static void menu(String str){
        
      //------------------------------   Manage Orders ---------------------------------------------
 
+       /**
+        * this method insert an order
+        * 
+        * 
+        */ 
        public static void insertOrder() {
     	    double totalPrice=0.0d;
     	    showCustomers();
@@ -434,6 +477,12 @@ public static void menu(String str){
  	     }
        }  // end insert order
        
+       /**
+        * this method show all orders
+        * 
+        * 
+        */ 
+       
        public static void showOrders() {
     	   try {
     		   MysqlOrderDao dao = new MysqlOrderDao();
@@ -449,6 +498,11 @@ public static void menu(String str){
     	   
        }// end show orders
        
+       /**
+        * this method update an order
+        * 
+        * 
+        */ 
        public static void updateOrder() {
     	   double totalPrice=0.0d;
     	   showOrders();
@@ -484,12 +538,22 @@ public static void menu(String str){
     	   
        }// end updateorder
         
+       /**
+        * this method delete an order
+        * 
+        * 
+        */ 
        public static void  deleteOrder() {
     	   
     	   
        }
        
    //---------------------   Manage OrdersItems  --------------------------------------------
+       /**
+        * this method insert a detail of an order
+        * 
+        * 
+        */ 
        
        public static void   insertOrdersItems() {
     	   double discount=0.0d;
@@ -522,6 +586,10 @@ public static void menu(String str){
     	     
        }// end ordersItems
        
+       /**
+        * this method show all record in ordersItems tabld       * 
+        * 
+        */ 
        public static void showOrdersDetails(){
     	   
     	   try {
