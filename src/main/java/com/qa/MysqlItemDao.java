@@ -9,51 +9,55 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-	/**
-	 * This class allow the communication with the database.
-	 * Implements the Dao interface.
-	 * 
-	 */
-public class MysqlItemDao implements Dao<Item>{
+import org.apache.log4j.Logger;
+
+/**
+ * This class allow the communication with the database. Implements the Dao
+ * interface.
+ * 
+ */
+public class MysqlItemDao implements Dao<Item> {
 	/**
 	 * @connection variable used to make connection with the database..
 	 * 
-	 */	
+	 */
 	private Connection connection;
-	
+
 	/**
 	 * Constructor initialise the connection variable
 	 * 
-	 */	
-		public MysqlItemDao()  throws SQLException{
-		
-		this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
-		
+	 */
+	public MysqlItemDao() throws SQLException {
+
+		this.connection = DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS", "Brahim", "user123");
+
 	}
+
+	private final Logger LOGGER = Logger.getLogger(this.getClass());
+
 	/**
 	 * Method that create an item.
 	 * 
 	 */
 
 	public void create(Item t) {
-		
 
 		try {
-			
-		      String query = "insert into items (items_name, price) values (?, ?)";
-		      
-		      PreparedStatement preparedStmt= connection.prepareStatement(query);
-		      preparedStmt.setString (1, t.getItemName());
-		      preparedStmt.setDouble(2, t.getPrice());
-		      
-		   
-		      preparedStmt.executeUpdate();
-		      }catch (Exception e) { 
-			System.out.println(e.getMessage());
-			 
+
+			String query = "insert into items (items_name, price) values (?, ?)";
+
+			PreparedStatement preparedStmt = connection.prepareStatement(query);
+			preparedStmt.setString(1, t.getItemName());
+			preparedStmt.setDouble(2, t.getPrice());
+
+			preparedStmt.executeUpdate();
+		} catch (Exception e) {
+			LOGGER.info(e.getMessage());
+
 		}
-		  
-	} 
+
+	}
+
 	/**
 	 * This method rea all record in item table.
 	 * 
@@ -61,52 +65,45 @@ public class MysqlItemDao implements Dao<Item>{
 	public List<Item> readAll() {
 		ArrayList<Item> items = new ArrayList<Item>();
 		try {
-			
+
 			Statement statement = connection.createStatement();
 			ResultSet resultSet = statement.executeQuery("select * from items");
 			while (resultSet.next()) {
-			     int id = resultSet.getInt("items_id");
+				int id = resultSet.getInt("items_id");
 				String name = resultSet.getString("items_name");
-				double price= resultSet.getDouble("price");
+				double price = resultSet.getDouble("price");
 				items.add(new Item(id, name, price));
-				
-				
+
 			}
 		} catch (Exception e) {
-			 System.out.println(e.getMessage());
-		} 
+			LOGGER.info(e.getMessage());
+		}
 		return items;
-		
-		
-		
-		
-	
-	} 
+
+	}
+
 	/**
 	 * Method that update an itemer.
 	 * 
 	 */
-	
+
 	public void update(Item t) {
-		
+
 		try {
-			
-		      String query = "update items set items_name=?,price=?  where items_id=?";
-		     
-		      PreparedStatement preparedStmt= connection.prepareStatement(query);
-		      preparedStmt.setString(1,t.getItemName());
-		      preparedStmt.setDouble(2,t.getPrice());
-		      preparedStmt.setLong(3,t.getId()); 
-		      
-		      preparedStmt.execute();
-		}catch (Exception e) { 
-			System.out.println(e.getMessage());
-			 
 
-		} 
-		
+			String query = "update items set items_name=?,price=?  where items_id=?";
 
-				
+			PreparedStatement preparedStmt = connection.prepareStatement(query);
+			preparedStmt.setString(1, t.getItemName());
+			preparedStmt.setDouble(2, t.getPrice());
+			preparedStmt.setLong(3, t.getId());
+
+			preparedStmt.execute();
+		} catch (Exception e) {
+			LOGGER.info(e.getMessage());
+
+		}
+
 	}
 
 	/**
@@ -116,58 +113,48 @@ public class MysqlItemDao implements Dao<Item>{
 	public void delete(int id) {
 
 		try {
-			
-		      String query = " delete from items where items_id=?";
-		     
-		      PreparedStatement preparedStmt= connection.prepareStatement(query);
-		      preparedStmt. setInt(1,id);
-		    	      
-		   
-		      preparedStmt.execute();
-		}catch (Exception e) { 
-			System.out.println(e.getMessage());
-			 
+
+			String query = " delete from items where items_id=?";
+
+			PreparedStatement preparedStmt = connection.prepareStatement(query);
+			preparedStmt.setInt(1, id);
+
+			preparedStmt.execute();
+		} catch (Exception e) {
+			LOGGER.info(e.getMessage());
 
 		}
-		
+
 	}
-	
-	
-	
+
 	/**
 	 * this method get the id of the last reord inserted.
 	 * 
 	 */
-	 public int getLastId() {
-	    	
-    	 int id=0 ;
-    	try {
-			
-		      String query = "select max(items_id) from items;";
-    		
-    		
-		      
-		       PreparedStatement preparedStmt= connection.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
-		       preparedStmt.execute();
-	
+	public int getLastId() {
 
-		       ResultSet keys = preparedStmt.getResultSet();
+		int id = 0;
+		try {
 
-		       if(keys.next()) {
-		    	   id = keys.getInt(1);
-		       }
-		       System.out.println("Last Key: " +id);
-		       return id;
-		 	       
-		 		      
-		       
-		}catch (Exception e) { 
-			System.out.println(e.getMessage());
-			 
+			String query = "select max(items_id) from items;";
 
-		} 
-    	
-    	return 0;
-    }
+			PreparedStatement preparedStmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+			preparedStmt.execute();
+
+			ResultSet keys = preparedStmt.getResultSet();
+
+			if (keys.next()) {
+				id = keys.getInt(1);
+			}
+			LOGGER.info("Last Key: " + id);
+			return id;
+
+		} catch (Exception e) {
+			LOGGER.info(e.getMessage());
+
+		}
+
+		return 0;
+	}
 
 }

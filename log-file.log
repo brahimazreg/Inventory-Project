@@ -1,0 +1,472 @@
+2020-02-13 18:27:03 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:27:03 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:27:03 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:27:03 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:27:03 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:39:12 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:39:12 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:39:12 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:39:12 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:39:12 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:39:23 INFO  Runner:54 - Please choose an option : ? 
+2020-02-13 18:39:23 INFO  Runner:55 -  1 - Add a  new customer . 
+2020-02-13 18:39:23 INFO  Runner:56 -  2 - Delete a customer . 
+2020-02-13 18:39:23 INFO  Runner:57 -  3 - Update a customer .
+2020-02-13 18:39:23 INFO  Runner:58 -  4 - Show all customers .
+2020-02-13 18:39:23 INFO  Runner:59 -  5 - Exit. 
+2020-02-13 18:39:42 INFO  Runner:199 -  Enter the firstname of the customer to create 
+2020-02-13 18:40:11 INFO  Runner:203 -  Enter the surName of the customer to create
+2020-02-13 18:40:19 INFO  Runner:208 -  A new customer has been added !
+2020-02-13 18:40:46 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:40:46 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:40:46 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:40:46 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:40:46 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:40:49 INFO  Runner:54 - Please choose an option : ? 
+2020-02-13 18:40:49 INFO  Runner:55 -  1 - Add a  new customer . 
+2020-02-13 18:40:49 INFO  Runner:56 -  2 - Delete a customer . 
+2020-02-13 18:40:49 INFO  Runner:57 -  3 - Update a customer .
+2020-02-13 18:40:49 INFO  Runner:58 -  4 - Show all customers .
+2020-02-13 18:40:49 INFO  Runner:59 -  5 - Exit. 
+2020-02-13 18:40:56 INFO  Runner:252 - Id      firstName      surName
+2020-02-13 18:40:56 INFO  Runner:255 - 1       Bob            Marley
+2020-02-13 18:40:56 INFO  Runner:255 - 2       Sara            Lacomb
+2020-02-13 18:40:56 INFO  Runner:255 - 47       Marco            Bounty
+2020-02-13 18:40:56 INFO  Runner:255 - 48       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 49       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 56       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 59       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 60       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 65       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 68       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 69       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 70       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 71       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 72       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 73       newFirstName            newSurName
+2020-02-13 18:40:56 INFO  Runner:255 - 74       bara            barou
+2020-02-13 18:40:57 INFO  Runner:274 -  Enter the id of the customer to update 
+2020-02-13 18:41:12 INFO  Runner:277 -  Enter the new firstname of the customer . 
+2020-02-13 18:41:23 INFO  Runner:280 -  Enter the new surName of the customer .
+2020-02-13 18:41:29 INFO  Runner:284 -  A record  has been updated !
+2020-02-13 18:41:53 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:41:53 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:41:53 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:41:53 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:41:53 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:41:55 INFO  Runner:54 - Please choose an option : ? 
+2020-02-13 18:41:55 INFO  Runner:55 -  1 - Add a  new customer . 
+2020-02-13 18:41:55 INFO  Runner:56 -  2 - Delete a customer . 
+2020-02-13 18:41:55 INFO  Runner:57 -  3 - Update a customer .
+2020-02-13 18:41:55 INFO  Runner:58 -  4 - Show all customers .
+2020-02-13 18:41:55 INFO  Runner:59 -  5 - Exit. 
+2020-02-13 18:42:03 INFO  Runner:252 - Id      firstName      surName
+2020-02-13 18:42:03 INFO  Runner:255 - 1       Bob            Marley
+2020-02-13 18:42:03 INFO  Runner:255 - 2       Sara            Lacomb
+2020-02-13 18:42:03 INFO  Runner:255 - 47       Marco            Bounty
+2020-02-13 18:42:03 INFO  Runner:255 - 48       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 49       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 56       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 59       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 60       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 65       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 68       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 69       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 70       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 71       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 72       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 73       newFirstName            newSurName
+2020-02-13 18:42:03 INFO  Runner:255 - 74       barara            testbara
+2020-02-13 18:42:14 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:42:14 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:42:14 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:42:14 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:42:14 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:42:19 INFO  Runner:54 - Please choose an option : ? 
+2020-02-13 18:42:19 INFO  Runner:55 -  1 - Add a  new customer . 
+2020-02-13 18:42:19 INFO  Runner:56 -  2 - Delete a customer . 
+2020-02-13 18:42:19 INFO  Runner:57 -  3 - Update a customer .
+2020-02-13 18:42:19 INFO  Runner:58 -  4 - Show all customers .
+2020-02-13 18:42:19 INFO  Runner:59 -  5 - Exit. 
+2020-02-13 18:42:33 INFO  Runner:252 - Id      firstName      surName
+2020-02-13 18:42:33 INFO  Runner:255 - 1       Bob            Marley
+2020-02-13 18:42:33 INFO  Runner:255 - 2       Sara            Lacomb
+2020-02-13 18:42:33 INFO  Runner:255 - 47       Marco            Bounty
+2020-02-13 18:42:33 INFO  Runner:255 - 48       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 49       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 56       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 59       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 60       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 65       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 68       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 69       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 70       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 71       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 72       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 73       newFirstName            newSurName
+2020-02-13 18:42:33 INFO  Runner:255 - 74       barara            testbara
+2020-02-13 18:42:33 INFO  Runner:230 -  Enter the id of the Customer to delete  
+2020-02-13 18:42:39 INFO  Runner:233 -  A record  has been deleted !
+2020-02-13 18:43:19 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:43:19 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:43:19 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:43:19 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:43:19 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:43:28 INFO  Runner:95 - Please choose an option : ? 
+2020-02-13 18:43:28 INFO  Runner:96 -  1 - Add a  new item . 
+2020-02-13 18:43:28 INFO  Runner:97 -  2 - Delete an item. 
+2020-02-13 18:43:28 INFO  Runner:98 -  3 - Update an item.
+2020-02-13 18:43:28 INFO  Runner:99 -  4 - Show all itemss .
+2020-02-13 18:43:28 INFO  Runner:100 -  5 - Exit. 
+2020-02-13 18:43:32 INFO  Runner:306 -  Enter the name of the item 
+2020-02-13 18:43:40 INFO  Runner:312 -  Enter the price of the item 
+2020-02-13 18:43:46 INFO  Runner:317 -  A new item has been added !
+2020-02-13 18:44:09 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:44:09 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:44:09 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:44:09 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:44:09 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:44:20 INFO  Runner:95 - Please choose an option : ? 
+2020-02-13 18:44:20 INFO  Runner:96 -  1 - Add a  new item . 
+2020-02-13 18:44:20 INFO  Runner:97 -  2 - Delete an item. 
+2020-02-13 18:44:20 INFO  Runner:98 -  3 - Update an item.
+2020-02-13 18:44:20 INFO  Runner:99 -  4 - Show all itemss .
+2020-02-13 18:44:20 INFO  Runner:100 -  5 - Exit. 
+2020-02-13 18:44:25 INFO  Runner:340 - id           Item name         price
+2020-02-13 18:44:25 INFO  Runner:342 - 1            TV                2500.99
+2020-02-13 18:44:25 INFO  Runner:342 - 2            Laptop                3000.59
+2020-02-13 18:44:25 INFO  Runner:342 - 3            Mobile                700.99
+2020-02-13 18:44:25 INFO  Runner:342 - 40            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 42            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 44            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 46            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 48            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 50            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 52            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 54            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 56            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 58            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 60            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 62            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 64            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 66            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 68            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 70            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 72            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 74            testto                999.99
+2020-02-13 18:44:25 INFO  Runner:342 - 75            test                100.99
+2020-02-13 18:44:25 INFO  Runner:362 -  Enter the id of the item to update 
+2020-02-13 18:44:30 INFO  Runner:365 -  Enter the new item to update  
+2020-02-13 18:44:43 INFO  Runner:368 -  Enter the new price 
+2020-02-13 18:44:54 INFO  Runner:373 -  A record  has been updated !
+2020-02-13 18:45:17 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:45:17 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:45:17 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:45:17 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:45:17 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:45:20 INFO  Runner:95 - Please choose an option : ? 
+2020-02-13 18:45:20 INFO  Runner:96 -  1 - Add a  new item . 
+2020-02-13 18:45:20 INFO  Runner:97 -  2 - Delete an item. 
+2020-02-13 18:45:20 INFO  Runner:98 -  3 - Update an item.
+2020-02-13 18:45:20 INFO  Runner:99 -  4 - Show all itemss .
+2020-02-13 18:45:20 INFO  Runner:100 -  5 - Exit. 
+2020-02-13 18:45:32 INFO  Runner:340 - id           Item name         price
+2020-02-13 18:45:32 INFO  Runner:342 - 1            TV                2500.99
+2020-02-13 18:45:32 INFO  Runner:342 - 2            Laptop                3000.59
+2020-02-13 18:45:32 INFO  Runner:342 - 3            Mobile                700.99
+2020-02-13 18:45:32 INFO  Runner:342 - 40            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 42            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 44            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 46            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 48            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 50            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 52            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 54            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 56            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 58            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 60            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 62            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 64            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 66            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 68            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 70            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 72            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 74            testto                999.99
+2020-02-13 18:45:32 INFO  Runner:342 - 75            rien                600.99
+2020-02-13 18:45:38 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:45:38 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:45:38 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:45:38 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:45:38 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:45:44 INFO  Runner:95 - Please choose an option : ? 
+2020-02-13 18:45:44 INFO  Runner:96 -  1 - Add a  new item . 
+2020-02-13 18:45:44 INFO  Runner:97 -  2 - Delete an item. 
+2020-02-13 18:45:44 INFO  Runner:98 -  3 - Update an item.
+2020-02-13 18:45:44 INFO  Runner:99 -  4 - Show all itemss .
+2020-02-13 18:45:44 INFO  Runner:100 -  5 - Exit. 
+2020-02-13 18:45:50 INFO  Runner:340 - id           Item name         price
+2020-02-13 18:45:50 INFO  Runner:342 - 1            TV                2500.99
+2020-02-13 18:45:50 INFO  Runner:342 - 2            Laptop                3000.59
+2020-02-13 18:45:50 INFO  Runner:342 - 3            Mobile                700.99
+2020-02-13 18:45:50 INFO  Runner:342 - 40            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 42            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 44            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 46            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 48            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 50            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 52            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 54            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 56            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 58            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 60            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 62            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 64            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 66            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 68            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 70            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 72            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 74            testto                999.99
+2020-02-13 18:45:50 INFO  Runner:342 - 75            rien                600.99
+2020-02-13 18:45:51 INFO  Runner:396 -  Enter the id of the item to delete  
+2020-02-13 18:45:59 INFO  Runner:399 -  A record  has been deleted !
+2020-02-13 18:47:18 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:47:18 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:47:18 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:47:18 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:47:18 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:47:23 INFO  Runner:136 - Please choose an option : ? 
+2020-02-13 18:47:23 INFO  Runner:137 -  1 - Add a  new order. 
+2020-02-13 18:47:23 INFO  Runner:138 -  2 - Delete an order . 
+2020-02-13 18:47:23 INFO  Runner:139 -  3 - Update an order.
+2020-02-13 18:47:23 INFO  Runner:140 -  4 - Show all orders .
+2020-02-13 18:47:23 INFO  Runner:141 -  5 - Add orderItems .
+2020-02-13 18:47:23 INFO  Runner:142 -  6 - Show all orderItems .
+2020-02-13 18:47:23 INFO  Runner:143 -  7 - Update quantity of an orther.
+2020-02-13 18:47:23 INFO  Runner:144 -  8 - Exit. 
+2020-02-13 18:47:28 INFO  Runner:252 - Id      firstName      surName
+2020-02-13 18:47:28 INFO  Runner:255 - 1       Bob            Marley
+2020-02-13 18:47:28 INFO  Runner:255 - 2       Sara            Lacomb
+2020-02-13 18:47:28 INFO  Runner:255 - 47       Marco            Bounty
+2020-02-13 18:47:28 INFO  Runner:255 - 48       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 49       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 56       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 59       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 60       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 65       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 68       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 69       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 70       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 71       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 72       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:255 - 73       newFirstName            newSurName
+2020-02-13 18:47:28 INFO  Runner:416 -  Enter the id of the customer for which you want to add an order 
+2020-02-13 18:47:37 INFO  Runner:340 - id           Item name         price
+2020-02-13 18:47:37 INFO  Runner:342 - 1            TV                2500.99
+2020-02-13 18:47:37 INFO  Runner:342 - 2            Laptop                3000.59
+2020-02-13 18:47:37 INFO  Runner:342 - 3            Mobile                700.99
+2020-02-13 18:47:37 INFO  Runner:342 - 40            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 42            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 44            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 46            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 48            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 50            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 52            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 54            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 56            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 58            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 60            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 62            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 64            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 66            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 68            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 70            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 72            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:342 - 74            testto                999.99
+2020-02-13 18:47:37 INFO  Runner:422 -  Enter the price for the  item . 
+2020-02-13 18:47:50 INFO  Runner:430 -  An order has been added.
+2020-02-13 18:48:19 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:48:19 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:48:19 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:48:19 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:48:19 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:48:22 INFO  Runner:136 - Please choose an option : ? 
+2020-02-13 18:48:22 INFO  Runner:137 -  1 - Add a  new order. 
+2020-02-13 18:48:22 INFO  Runner:138 -  2 - Delete an order . 
+2020-02-13 18:48:22 INFO  Runner:139 -  3 - Update an order.
+2020-02-13 18:48:22 INFO  Runner:140 -  4 - Show all orders .
+2020-02-13 18:48:22 INFO  Runner:141 -  5 - Add orderItems .
+2020-02-13 18:48:22 INFO  Runner:142 -  6 - Show all orderItems .
+2020-02-13 18:48:22 INFO  Runner:143 -  7 - Update quantity of an orther.
+2020-02-13 18:48:22 INFO  Runner:144 -  8 - Exit. 
+2020-02-13 18:48:29 INFO  Runner:449 - orderid  customer_id   cost
+2020-02-13 18:48:29 INFO  Runner:452 - 26       1             2500.99
+2020-02-13 18:48:29 INFO  Runner:452 - 27       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 38       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 41       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 42       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 47       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 49       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 50       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 51       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 52       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 53       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 54       47             2500.59
+2020-02-13 18:48:29 INFO  Runner:452 - 55       1             500.99
+2020-02-13 18:48:29 INFO  Runner:472 -  Enter the id  of the order to update 
+2020-02-13 18:48:39 INFO  Runner:477 -  Enter the new price  
+2020-02-13 18:48:45 INFO  Runner:485 - The price has been updated
+2020-02-13 18:49:03 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:49:03 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:49:03 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:49:03 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:49:03 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:49:06 INFO  Runner:136 - Please choose an option : ? 
+2020-02-13 18:49:06 INFO  Runner:137 -  1 - Add a  new order. 
+2020-02-13 18:49:06 INFO  Runner:138 -  2 - Delete an order . 
+2020-02-13 18:49:06 INFO  Runner:139 -  3 - Update an order.
+2020-02-13 18:49:06 INFO  Runner:140 -  4 - Show all orders .
+2020-02-13 18:49:06 INFO  Runner:141 -  5 - Add orderItems .
+2020-02-13 18:49:06 INFO  Runner:142 -  6 - Show all orderItems .
+2020-02-13 18:49:06 INFO  Runner:143 -  7 - Update quantity of an orther.
+2020-02-13 18:49:06 INFO  Runner:144 -  8 - Exit. 
+2020-02-13 18:49:18 INFO  Runner:449 - orderid  customer_id   cost
+2020-02-13 18:49:18 INFO  Runner:452 - 26       1             2500.99
+2020-02-13 18:49:18 INFO  Runner:452 - 27       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 38       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 41       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 42       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 47       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 49       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 50       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 51       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 52       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 53       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 54       47             2500.59
+2020-02-13 18:49:18 INFO  Runner:452 - 55       1             700.45
+2020-02-13 18:49:24 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:49:24 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:49:24 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:49:24 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:49:24 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:49:29 INFO  Runner:136 - Please choose an option : ? 
+2020-02-13 18:49:29 INFO  Runner:137 -  1 - Add a  new order. 
+2020-02-13 18:49:29 INFO  Runner:138 -  2 - Delete an order . 
+2020-02-13 18:49:29 INFO  Runner:139 -  3 - Update an order.
+2020-02-13 18:49:29 INFO  Runner:140 -  4 - Show all orders .
+2020-02-13 18:49:29 INFO  Runner:141 -  5 - Add orderItems .
+2020-02-13 18:49:29 INFO  Runner:142 -  6 - Show all orderItems .
+2020-02-13 18:49:29 INFO  Runner:143 -  7 - Update quantity of an orther.
+2020-02-13 18:49:29 INFO  Runner:144 -  8 - Exit. 
+2020-02-13 18:49:39 INFO  Runner:449 - orderid  customer_id   cost
+2020-02-13 18:49:39 INFO  Runner:452 - 26       1             2500.99
+2020-02-13 18:49:39 INFO  Runner:452 - 27       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 38       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 41       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 42       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 47       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 49       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 50       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 51       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 52       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 53       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 54       47             2500.59
+2020-02-13 18:49:39 INFO  Runner:452 - 55       1             700.45
+2020-02-13 18:49:39 INFO  Runner:505 -  Enter the id of the order to delete.  
+2020-02-13 18:49:47 INFO  Runner:508 -  An order has been deleted
+2020-02-13 18:50:08 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:50:08 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:50:08 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:50:08 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:50:08 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:50:14 INFO  Runner:136 - Please choose an option : ? 
+2020-02-13 18:50:14 INFO  Runner:137 -  1 - Add a  new order. 
+2020-02-13 18:50:14 INFO  Runner:138 -  2 - Delete an order . 
+2020-02-13 18:50:14 INFO  Runner:139 -  3 - Update an order.
+2020-02-13 18:50:14 INFO  Runner:140 -  4 - Show all orders .
+2020-02-13 18:50:14 INFO  Runner:141 -  5 - Add orderItems .
+2020-02-13 18:50:14 INFO  Runner:142 -  6 - Show all orderItems .
+2020-02-13 18:50:14 INFO  Runner:143 -  7 - Update quantity of an orther.
+2020-02-13 18:50:14 INFO  Runner:144 -  8 - Exit. 
+2020-02-13 18:50:25 INFO  Runner:449 - orderid  customer_id   cost
+2020-02-13 18:50:25 INFO  Runner:452 - 26       1             2500.99
+2020-02-13 18:50:25 INFO  Runner:452 - 27       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 38       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 41       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 42       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 47       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 49       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 50       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 51       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 52       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 53       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:452 - 54       47             2500.59
+2020-02-13 18:50:25 INFO  Runner:530 -  Enter the id of the order for witch you want to add details 
+2020-02-13 18:50:55 INFO  Runner:340 - id           Item name         price
+2020-02-13 18:50:55 INFO  Runner:342 - 1            TV                2500.99
+2020-02-13 18:50:55 INFO  Runner:342 - 2            Laptop                3000.59
+2020-02-13 18:50:55 INFO  Runner:342 - 3            Mobile                700.99
+2020-02-13 18:50:55 INFO  Runner:342 - 40            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 42            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 44            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 46            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 48            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 50            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 52            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 54            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 56            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 58            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 60            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 62            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 64            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 66            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 68            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 70            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 72            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:342 - 74            testto                999.99
+2020-02-13 18:50:55 INFO  Runner:537 -  Enter the quantity  
+2020-02-13 18:51:02 INFO  Runner:542 -  Enter the price  
+2020-02-13 18:51:11 INFO  Runner:547 -  Enter the id of the item 
+2020-02-13 18:51:17 INFO  MysqlOrdersItemsDao:66 -  the total is  :4907.0  the discount is : 0.0
+2020-02-13 18:51:17 INFO  Runner:563 - A details order has been added .
+2020-02-13 18:51:46 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:51:46 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:51:46 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:51:46 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:51:46 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:51:58 INFO  Runner:136 - Please choose an option : ? 
+2020-02-13 18:51:58 INFO  Runner:137 -  1 - Add a  new order. 
+2020-02-13 18:51:58 INFO  Runner:138 -  2 - Delete an order . 
+2020-02-13 18:51:58 INFO  Runner:139 -  3 - Update an order.
+2020-02-13 18:51:58 INFO  Runner:140 -  4 - Show all orders .
+2020-02-13 18:51:58 INFO  Runner:141 -  5 - Add orderItems .
+2020-02-13 18:51:58 INFO  Runner:142 -  6 - Show all orderItems .
+2020-02-13 18:51:58 INFO  Runner:143 -  7 - Update quantity of an orther.
+2020-02-13 18:51:58 INFO  Runner:144 -  8 - Exit. 
+2020-02-13 18:52:05 INFO  Runner:580 - ordersItems  fk_ordres_Id   fk_items_id,    quantity   cost
+2020-02-13 18:52:05 INFO  Runner:584 - 11            26              2               5          14703.0
+2020-02-13 18:52:05 INFO  Runner:584 - 12            27              1               4          5002.0
+2020-02-13 18:52:05 INFO  Runner:584 - 15            26              3               10          7010.0
+2020-02-13 18:52:05 INFO  Runner:584 - 16            26              3               7          4907.0
+2020-02-13 18:52:05 INFO  Runner:599 -  Enter the ordersItems for which you want to change the quantity
+2020-02-13 18:52:15 INFO  Runner:604 -  Enter the new quantity for the item
+2020-02-13 18:52:20 INFO  Runner:609 -  Enter the new price for the item
+2020-02-13 18:52:26 INFO  Runner:617 - The quantity has been changed
+2020-02-13 18:52:47 INFO  Runner:23 - Please choose an option : ? 
+2020-02-13 18:52:47 INFO  Runner:24 -  1 - Manage customer . 
+2020-02-13 18:52:47 INFO  Runner:25 -  2 - Manage item . 
+2020-02-13 18:52:47 INFO  Runner:26 -  3 - Manage order .
+2020-02-13 18:52:47 INFO  Runner:27 -  4 - Exit. 
+2020-02-13 18:52:50 INFO  Runner:136 - Please choose an option : ? 
+2020-02-13 18:52:50 INFO  Runner:137 -  1 - Add a  new order. 
+2020-02-13 18:52:50 INFO  Runner:138 -  2 - Delete an order . 
+2020-02-13 18:52:50 INFO  Runner:139 -  3 - Update an order.
+2020-02-13 18:52:50 INFO  Runner:140 -  4 - Show all orders .
+2020-02-13 18:52:50 INFO  Runner:141 -  5 - Add orderItems .
+2020-02-13 18:52:50 INFO  Runner:142 -  6 - Show all orderItems .
+2020-02-13 18:52:50 INFO  Runner:143 -  7 - Update quantity of an orther.
+2020-02-13 18:52:50 INFO  Runner:144 -  8 - Exit. 
+2020-02-13 18:52:56 INFO  Runner:580 - ordersItems  fk_ordres_Id   fk_items_id,    quantity   cost
+2020-02-13 18:52:56 INFO  Runner:584 - 11            26              2               5          14703.0
+2020-02-13 18:52:56 INFO  Runner:584 - 12            27              1               4          5002.0
+2020-02-13 18:52:56 INFO  Runner:584 - 15            26              3               10          7010.0
+2020-02-13 18:52:56 INFO  Runner:584 - 16            26              3               12          8412.0

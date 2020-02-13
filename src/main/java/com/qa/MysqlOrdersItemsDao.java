@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 
 	/**
 	 * This class allow the communication with the database.
@@ -30,6 +32,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 	this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
 	
 }
+	private final Logger LOGGER = Logger.getLogger(this.getClass());
 	/**
 	 * Method that create a record in OrderItem table.
 	 * 
@@ -60,11 +63,11 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 		  
 		      preparedStmt.executeUpdate();
 		      
-		      System.out.println(" the total is  :" + total + "  the discount is : " + discount);
+		      LOGGER.info(" the total is  :" + total + "  the discount is : " + discount);
 		      
 		      
 		      }catch (Exception e) { 
-			System.out.println(e.getMessage());
+			LOGGER.info(e.getMessage());
 			
 
 		}
@@ -95,7 +98,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 				
 			}
 		} catch (Exception e) {
-			 System.out.println(e.getMessage());
+			 LOGGER.info(e.getMessage());
 		}
 		return ordersItems;
 		
@@ -140,7 +143,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 		   
 		      preparedStmt.executeUpdate();
 		      }catch (Exception e) { 
-			System.out.println(e.getMessage());
+			LOGGER.info(e.getMessage());
 			
 
 		}
@@ -174,7 +177,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 						orders.add(new OrdersItems(id, 0, 0,quantity,price));
 					}
 		} catch (Exception e) {
-					 System.out.println(e.getMessage());
+					 LOGGER.info(e.getMessage());
 				} 
 		
 		

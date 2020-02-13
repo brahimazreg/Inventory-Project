@@ -11,6 +11,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 	/**
 	 * This class allow the communication with the database qnd access to the order table.
 	 * Implements the Dao interface.
@@ -33,12 +35,14 @@ public class MysqlOrderDao implements Dao<Order>{
 	this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
 	
 }
+	
+	private final Logger LOGGER = Logger.getLogger(this.getClass());
 	/**
 	 * Method that create an order.
 	 * 
 	 */
 	public void create(Order t) {
-
+ 
 		try {
 			
 		      String query = "insert into orders (fk_customer_id,cost) values (?,?)";
@@ -50,12 +54,12 @@ public class MysqlOrderDao implements Dao<Order>{
 		  
 		      preparedStmt.executeUpdate();
 		      }catch (Exception e) { 
-			System.out.println(e.getMessage());
+			LOGGER.info(e.getMessage());
 			
 
 		}
 		 
-	}   
+	}    
 	/**
 	 * Method that read all orders from order table..
 	 * 
@@ -78,7 +82,7 @@ public class MysqlOrderDao implements Dao<Order>{
 				
 			}
 		} catch (Exception e) {
-			 System.out.println(e.getMessage());
+			 LOGGER.info(e.getMessage());
 		} 
 		return orders;
 	
@@ -100,7 +104,7 @@ public class MysqlOrderDao implements Dao<Order>{
 		   
 		      preparedStmt.executeUpdate();
 		      }catch (Exception e) { 
-			System.out.println(e.getMessage());
+			LOGGER.info(e.getMessage());
 			
 
 		}
@@ -119,7 +123,7 @@ public class MysqlOrderDao implements Dao<Order>{
 		   
 		      preparedStmt.execute();
 		}catch (Exception e) { 
-			System.out.println(e.getMessage());
+			LOGGER.info(e.getMessage());
 			
 
 		}
@@ -146,13 +150,13 @@ public class MysqlOrderDao implements Dao<Order>{
 		       if(keys.next()) {
 		    	   id = keys.getInt(1);
 		       }
-		       System.out.println("Last Key: " +id);
+		       LOGGER.info("Last Key: " +id);
 		       return id;
 		 	       
 		 		      
 		       
 		}catch (Exception e) { 
-			System.out.println(e.getMessage());
+			LOGGER.info(e.getMessage());
 			 
 
 		} 
