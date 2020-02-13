@@ -45,10 +45,19 @@ public class MysqlItemDaoTest {
 		}
 	}
 
-	@Ignore
+	
 	@Test
 	public void testDelete() {
-		fail("Not yet implemented");
+		try {
+			MysqlItemDao myDao = new MysqlItemDao();
+			int id  = myDao.getLastId();
+			Item item = new Item(id,"testto",999.99);
+			myDao.delete(id);
+			assertEquals(1, id - myDao.getLastId());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

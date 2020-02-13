@@ -6,62 +6,51 @@ import org.junit.Test;
 
 public class OrderTest {
 
-	@Test
-	public void testGetQuantity() {
-		Order order = new Order(1,3,12504.15,5);
-		order.setQuantity(5);
-		assertEquals(order.getQuantity(),5);
-	}
+	
 
-	@Test
-	public void testSetQuantity() {
-		Order order = new Order(1,3,12504.15,5);
-		order.setOrders_id(1);
-		assertEquals(order.getQuantity(),5);
-	}
+	
 
 	@Test
 	public void testGetOrders_id() {
-		Order order = new Order(1,3,12504.15,5);
-		order.setFk_customer_id(3);
-		assertEquals(order.getOrders_id(),1);
+		Order order = new Order(26,1,2500.99);
+		order.setOrders_id(26);;
+		assertEquals(26,order.getOrders_id());
 	}
 
 	@Test
 	public void testSetOrders_id() {
-		Order order = new Order(1,3,12504.15,5);
-		order.setFk_customer_id(3);
-		assertEquals(order.getOrders_id(),1);
+		Order order = new Order(26,1,2500.99);
+		order.setOrders_id(26);;
+		assertEquals(26,order.getOrders_id());
 	}
 
 	@Test
 	public void testGetFk_customer_id() {
-		Order order = new Order(1,3,12504.15,5);
-		order.setOrders_id(1);
-		assertEquals(order.getFk_customer_id(),3);
+		Order order = new Order(26,1,2500.99);
+		assertEquals(1,order.getFk_customer_id());
 	}
 
 	@Test
 	public void testSetFk_customer_id() {
-		Order order = new Order(1,3,12504.15,5);
-		order.setFk_customer_id(3);;
-		assertEquals(order.getOrders_id(),1);
+		Order order = new Order(26,1,2500.99);
+		order.setFk_customer_id(1);
+		assertEquals(1,order.getFk_customer_id());
 	
 	}
 
 	@Test
 	public void testGetCost() {
-		Order order = new Order(1,3,12504.15,5);
-		order.setCost(12504.15);
-		assertEquals(order.getOrders_id(),1);
+		Order order = new Order(26,1,2500.99);
+		order.setCost(2500.99);
+		assertEquals(2500.99,2500.99,order.getCost());
 	
 	}
 
 	@Test
 	public void testSetCost() {
-		Order order = new Order(1,3,12504.15,5);
-		order.setCost(12504.15);
-		assertEquals(order.getOrders_id(),1);
+		Order order = new Order(26,1,2500.99);
+		order.setCost(2500.99);
+		assertEquals(2500.99,2500.99,order.getCost());
 	}
 
 }

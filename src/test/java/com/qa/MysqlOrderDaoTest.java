@@ -9,15 +9,15 @@ import org.junit.Test;
 
 public class MysqlOrderDaoTest {
 
-
+    
 	@Test
 	public void testCreate() {
 		try {
 			MysqlOrderDao myDao = new MysqlOrderDao();
 			int id  = myDao.getLastId();
-			Order order= new Order(id,2,100.99,12);
+			Order order= new Order(id,47,3000.99);
 			myDao.create(order);
-			assertEquals(2, myDao.readAll().get(myDao.readAll().size()-1).getFk_customer_id());
+			assertEquals(47, myDao.readAll().get(myDao.readAll().size()-1).getFk_customer_id());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -36,19 +36,28 @@ public class MysqlOrderDaoTest {
 		try {
 			MysqlOrderDao myDao = new MysqlOrderDao();
 			int id  = myDao.getLastId();
-			Order order= new Order(id,2,999.99,10);
-			myDao.create(order);
-			assertEquals(10, myDao.readAll().get(myDao.readAll().size()-1).getQuantity());
+			Order order= new Order(id,47,2500.59);
+			myDao.update(order);
+			assertEquals(2500.59,2500.59, myDao.readAll().get(myDao.readAll().size()-1).getCost());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	@Ignore
+	
 	@Test
 	public void testDelete() {
-		fail("Not yet implemented");
+		try {
+			MysqlOrderDao myDao = new MysqlOrderDao();
+			int id  = myDao.getLastId();
+			Order order= new Order(id,47,2500.59);
+			myDao.delete(id);
+			assertEquals(1, id - myDao.getLastId());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

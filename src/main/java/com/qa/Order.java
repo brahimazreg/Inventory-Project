@@ -38,7 +38,7 @@ public class Order {
 		this.cost=price;
 	
 		
-		
+		 
 	} 
     
 	

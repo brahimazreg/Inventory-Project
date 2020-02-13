@@ -61,23 +61,19 @@ public class MysqlCustomerDaoTest {
 	} 
 	
 	
-	@Ignore
+	
 	@Test
 	public void testDelete() {
 		try {
 			MysqlCustomerDao myDao = new MysqlCustomerDao();
-			//Customer customer = new Customer(7L,"oldFirstName","oldSurName");
 			int id  = myDao.getLastId();
-			//System.out.println(" id = " +id);
+			Customer customer = new Customer(0L,"OldName","oldSurName");
 			myDao.delete(id);
-			//System.out.println(myDao.readAll().get(myDao.readAll().size()-1).getFirstName());
-			assertNull( "OldName",myDao.readAll().get(myDao.readAll().size()-1).getFirstName());
-		  } catch (SQLException e) {
+			assertEquals(1, id - myDao.getLastId());
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		
-	      }
-
+		}
 	
    }  
 }
