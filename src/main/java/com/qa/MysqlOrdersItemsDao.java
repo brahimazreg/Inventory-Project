@@ -107,7 +107,22 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 	 * 
 	 */
 	public void update(OrdersItems t) {
-		// TODO Auto-generated method stub
+		try {
+			// the mysql insert statement
+		      String query = "update ordersItems  set quantity=? where ordersItems_id=?";
+		      // create the mysql insert preparedstatement
+		      PreparedStatement preparedStmt= connection.prepareStatement(query);
+		      preparedStmt.setInt(1, t.getQuantity());
+		      preparedStmt.setInt(2, t.getId());
+		      
+		      
+		   // execute the preparedstatement
+		      preparedStmt.executeUpdate();
+		      }catch (Exception e) { 
+			System.out.println(e.getMessage());
+			 //System.err.println(e.getMessage());
+
+		}
 		
 	}
 

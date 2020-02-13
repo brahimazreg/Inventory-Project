@@ -151,8 +151,8 @@ public static void menu(String str){
 					System.out.println(" 4 - Show all orders .");
 					System.out.println(" 5 - Add orderItems .");
 					System.out.println(" 6 - Show all orderItems .");
-					
-					System.out.println(" 7 - Exit. ");
+					System.out.println(" 7 - Update quantity of an orther.");
+					System.out.println(" 8 - Exit. ");
 					java.util.Scanner op = new  java.util.Scanner(System.in);
 			                option = op.nextInt();
 					switch (option){
@@ -191,7 +191,7 @@ public static void menu(String str){
 			                            break;
 
 					}// end swith
-			  }while(option <1  || option > 5);	// end do
+			  }while(option <1  || option > 8);	// end do
 			
 		}// end if order
 		
@@ -652,7 +652,31 @@ public static void menu(String str){
        
        public static void updateOrderQuantity() {
     	  
-    	   
+    	   showOrdersDetails();
+    	  
+    	     // we update only the quantity
+    	     Scanner scan1 = new Scanner(System.in);
+			 System.out.println(" Enter the ordersItems for which you want to change the quantity"); 
+			 System.out.println();
+			 int ordersItems_id  =scan1.nextInt() ;
+			 
+			 Scanner scan2 = new Scanner(System.in);
+			 System.out.println(" Enter the new quantity for the item"); 
+			 System.out.println();
+			 int newQuantity =scan2.nextInt() ;
+			
+			 
+			 try {
+				 MysqlOrdersItemsDao dao = new MysqlOrdersItemsDao();
+				 OrdersItems orderItem = new OrdersItems(ordersItems_id,0,0,newQuantity,0);
+				 dao.update(orderItem);
+				 System.out.println("The quantity has been changed");
+				 scan1.close();
+				 scan2.close();
+			 }
+    	     catch (Exception e) {
+    	    	 System.out.println(e.getMessage());
+    	     }
     	   
        }
        
