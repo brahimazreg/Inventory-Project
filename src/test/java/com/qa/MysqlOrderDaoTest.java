@@ -45,19 +45,10 @@ public class MysqlOrderDaoTest {
 		}
 	}
 
-	
+	@Ignore
 	@Test
 	public void testDelete() {
-		try {
-			MysqlOrderDao myDao = new MysqlOrderDao();
-			int id  = myDao.getLastId();
-			Order order= new Order(id,47,2500.59);
-			myDao.delete(id);
-			assertEquals(1, id - myDao.getLastId());
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 
 }
