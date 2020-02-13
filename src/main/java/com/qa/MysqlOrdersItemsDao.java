@@ -37,16 +37,32 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 	public void create(OrdersItems t) {
 		try {
 			// the mysql insert statement
-		      String query = "insert into ordersItems (fk_orders_id,fk_items_id,discountPrice,quantity) values (?, ?,?,?)";
+			double total;
+			double discount;;
+			if (t.getPrice()* t.getQuantity() > 10000) {
+				
+				total = Math.round((t.getPrice()* t.getQuantity()) - (t.getPrice()*10)/100);
+				discount=(t.getPrice()*10)/100;
+				
+			}
+			else {
+				
+				total = Math.round(t.getPrice()* t.getQuantity()) ;
+				discount=0;
+			}
+			  String query = "insert into ordersItems (fk_orders_id,fk_items_id,quantity,price) values (?, ?,?,?)";
 		      // create the mysql insert preparedstatement
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setInt(1,t.getFk_orders()); 
 		      preparedStmt.setInt(2, t.getFk_items());
-		      preparedStmt.setDouble(3, t.getDiscount());
-		      preparedStmt.setInt(4, t.getQuantity());
-		      
+		      preparedStmt.setInt(3, t.getQuantity());
+		      preparedStmt.setDouble(4, total);
 		   // execute the preparedstatement
 		      preparedStmt.executeUpdate();
+		      
+		      System.out.println(" the total is  :" + total + "  the discount is : " + discount);
+		      
+		      
 		      }catch (Exception e) { 
 			System.out.println(e.getMessage());
 			 //System.err.println(e.getMessage());
@@ -55,7 +71,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 		
 	} 
 
-
+     
 	
 	/**
 	 * Method read all record  in ordersItems taqble.
@@ -73,8 +89,8 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 			     int fk_order = resultSet.getInt("fk_orders_id");
 			     int fk_item = resultSet.getInt("fk_items_id");
 			     int quantity = resultSet.getInt("quantity");
-				 double discount= resultSet.getDouble("discountPrice");
-				 ordersItems.add(new OrdersItems(id,fk_order,fk_item, quantity,discount));
+				 double price= resultSet.getDouble("price");
+				 ordersItems.add(new OrdersItems(id,fk_order,fk_item, quantity,price));
 				
 				
 			}
@@ -83,7 +99,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 		}
 		return ordersItems;
 		
-		
+		 
 	} 
 
 	/**
@@ -118,8 +134,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 					     int id = resultSet.getInt("ordersItems_id");
 					     double  price= resultSet.getInt("cost");
 					     int quantity = resultSet.getInt("quantity");
-						
-						
+					
 						orders.add(new OrdersItems(id, 0, 0,quantity,price));
 					}
 		} catch (Exception e) {

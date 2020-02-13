@@ -71,9 +71,9 @@ public class MysqlOrderDao implements Dao<Order>{
 			while (resultSet.next()) {
 			     int id = resultSet.getInt("orders_id");
 				int fk_customer = resultSet.getInt("fk_customer_id");
-				int quantity=resultSet.getInt("quantity");
+				//int quantity=resultSet.getInt("quantity");
 				double price= resultSet.getDouble("cost");
-				orders.add(new Order(id, fk_customer, price));
+				orders.add(new Order(id, fk_customer, price)); 
 				
 				
 			}
@@ -82,7 +82,7 @@ public class MysqlOrderDao implements Dao<Order>{
 		} 
 		return orders;
 	
-	}
+	} 
     
 	/**
 	 * Method that update a record in the order table.
@@ -110,7 +110,20 @@ public class MysqlOrderDao implements Dao<Order>{
 	}
 
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		try {
+			// the mysql insert statement
+		      String query = "delete from orders  where orders_id=?";
+		      // create the mysql insert preparedstatement
+		      PreparedStatement preparedStmt= connection.prepareStatement(query);
+		      preparedStmt. setInt(1,id);
+		    	      
+		   // execute the preparedstatement
+		      preparedStmt.execute();
+		}catch (Exception e) { 
+			System.out.println(e.getMessage());
+			 //System.err.println(e.getMessage());
+
+		}
 		
 	}
 

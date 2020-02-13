@@ -16,7 +16,7 @@ public static void main(String[] args)  throws SQLException{
 	 * 
 	 * 
 	 */
-	/*	int option;
+		int option;
 		java.util.Scanner op= new  java.util.Scanner(System.in);
 		do {
 			System.out.println("Please choose an option : ? ");
@@ -37,10 +37,10 @@ public static void main(String[] args)  throws SQLException{
 		    }
 		} while(option <1 || option >4);  
 	     op.close();
-	     */
 	     
-	     insertOrder();
 	     
+	   //  insertOrder();
+	//insertOrdersItems();
 	      
 	     
 }// end method main   
@@ -69,7 +69,7 @@ public static void menu(String str){
 					switch (option){
 			                    case 1:
 			                            // call insert 
-			                    	insertCustomer();
+			                    	insertCustomer(); 
 			                            break;
 			                    case 2:
 			                            // call delete 
@@ -178,7 +178,10 @@ public static void menu(String str){
 		                        case 6 :
 		                        	showOrdersDetails();
 		                    	    break;
-			                    case 7 :
+		                        case 7:
+		                        	updateOrderQuantity();
+		                        	break;
+			                    case 8 :
 			                            // call update
 			                            System.exit(0);
 			                            break;
@@ -222,9 +225,11 @@ public static void menu(String str){
 			 Scanner scan1 = new Scanner(System.in);
 			 System.out.println(" Enter the firstname of the customer to create "); 
 			 String firstName =scan1.nextLine(); 
+			 
 			 Scanner scan2 = new Scanner(System.in);
 			 System.out.println(" Enter the surName of the customer to create"); 
 			 String surName =  scan2.nextLine();
+			 
 			 Customer customer = new Customer(0L,firstName,surName);
 			 dao.create(customer);
 			System.out.println(" A new customer has been added !");
@@ -483,10 +488,10 @@ public static void menu(String str){
     	   try {
     		   MysqlOrderDao dao = new MysqlOrderDao();
       			 List<Order> orders= dao.readAll();
-      			    System.out.println("orderid"+ "  " + "customer_id" + "   " + "   " +"cost" );
+      			    System.out.println("orderid"+ "  " + "customer_id" + "   " + "cost" );
       	      		for(Order order:orders)
       	      			
-      	      			System.out.println( order.getOrders_id()+ "        " +order.getFk_customer_id() + "          " +order.getCost() ) ;
+      	      			System.out.println( order.getOrders_id()+ "       " +order.getFk_customer_id() + "             " +order.getCost() ) ;
       		} catch (Exception e) {
       			// TODO Auto-generated catch block
       			 System.out.println(e.getMessage()); 
@@ -510,7 +515,7 @@ public static void menu(String str){
 			 int id  =scan1.nextInt() ;
 			 
 			 Scanner scan3 = new Scanner(System.in);
-			 System.out.println(" Enter the the price  "); 
+			 System.out.println(" Enter the new price  "); 
 			 System.out.println();
 			 double price =scan3.nextDouble() ;
 			 
@@ -535,6 +540,22 @@ public static void menu(String str){
         */ 
        public static void  deleteOrder() {
     	   
+    	   showOrders();
+  	     try {
+  	    	     MysqlOrderDao dao = new MysqlOrderDao();
+				 Scanner scan = new Scanner(System.in);
+				 System.out.println(" Enter the id of the order to delete.  "); 
+				 int id = scan.nextInt(); 
+				 dao.delete(id);
+				 System.out.println(" An order has been deleted");
+				 scan.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				 System.out.println(e.getMessage()); 
+			}
+    	   
+    	   
+    	   
     	   
        }
        
@@ -544,37 +565,69 @@ public static void menu(String str){
         * 
         * 
         */ 
-       
+      
        public static void   insertOrdersItems() {
+    	  
     	   double discount=0.0d;
+    	   double total=0.0d;
+    	   int  i;
+    	     showOrders();
+    	     Scanner scan1 = new Scanner(System.in);
+			 System.out.println(" Enter the id of the order for witch you want to add details "); 
+			 System.out.println();
+			 int order_id  =scan1.nextInt() ;
+			
+		     showItems();
+			
+			 Scanner scan2 = new Scanner(System.in);
+			 System.out.println(" Enter the quantity  "); 
+			 System.out.println();
+			 int quantity  = scan2.nextInt();
+    	   
+			 Scanner scan3 = new Scanner(System.in);
+			 System.out.println(" Enter the price  "); 
+			 System.out.println();
+			 double price   = scan3.nextDouble();
+			 
+			 Scanner scan4 = new Scanner(System.in);
+			 System.out.println(" Enter the id of the item "); 
+			 System.out.println();
+			 int item_id  = scan4.nextInt();
+			 
     	   
 		try {
 			MysqlOrdersItemsDao dao = new MysqlOrdersItemsDao();
-			List<OrdersItems> myOrder1 = dao.getInfoOrder();
-			//System.out.println(myOrder1.get(3).getCost()).
 			
-		if(  myOrder1.get(0).getQuantity() *myOrder1.get(0).getDiscount() > 10000) {
-				discount = (myOrder1.get(0).getDiscount()*10)/100;
-			}else {
-				 discount=0.0d;
-			}
-			OrdersItems ordersitem = new OrdersItems(myOrder1.get(0).getId(),0,0, myOrder1.get(0).getQuantity(),discount);
+			 
 			
-			dao.create(ordersitem);
+			 OrdersItems  orderItem = new OrdersItems(0,order_id,item_id,quantity,price);
+			 dao.create(orderItem);
+			// System.out.println(" An order has been added.");
+           
+			
+			 
+			 scan1.close();
+			 scan3.close();
+			 
+			 scan2.close();
+			 scan4.close();
+	
+			
 			/*
 			for(Order order:myOrder1) {
 				System.out.print(order.getOrders_id());
 			}*/
-			System.out.println("A details for an order has been added .");
+			System.out.println("A details order has been added .");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 		}
     	    
-    	     
+    	    
+    	   
     	   
     	     
-       }// end ordersItems
+       }// end ordersItems   
        
        /**
         * this method show all record in ordersItems tabld       * 
@@ -585,16 +638,23 @@ public static void menu(String str){
     	   try {
     		   MysqlOrdersItemsDao dao = new MysqlOrdersItemsDao();
       			 List<OrdersItems> ordersItems= dao.readAll();
-      			    System.out.println("ordersItems"+ "  " + "fk_ordres_Id" + "   "+ "fk_items_id,"+"    "+ "quantity" + "   " +"discount" );
+      			    System.out.println("ordersItems"+ "  " + "fk_ordres_Id" + "   "+ "fk_items_id,"+"    "+ "quantity" + "   " +"cost" );
       	      		for(OrdersItems orderItem:ordersItems)
       	      
-      	      			System.out.println( orderItem.getId()+"            " +orderItem.getFk_orders()+ "              " +orderItem.getFk_items()+ "               "+ orderItem.getQuantity()+"          " +orderItem.getDiscount() ) ;
+      	      			System.out.println( orderItem.getId()+"            " +orderItem.getFk_orders()+ "              " +orderItem.getFk_items()+ "               "+ orderItem.getQuantity()+"          " +orderItem.getPrice() ) ;
       		} catch (Exception e) {
       			// TODO Auto-generated catch block
       			 System.out.println(e.getMessage()); 
       		}
     	   
        }// end showOrdersDetails
+       
+       
+       public static void updateOrderQuantity() {
+    	  
+    	   
+    	   
+       }
        
        
 }// end class

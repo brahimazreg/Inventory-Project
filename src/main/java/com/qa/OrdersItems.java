@@ -31,7 +31,7 @@ public class OrdersItems {
 	 *
 	 * 
 	 */
-    private double discount;
+    private double price;
     /**
 	 * @quantity the quantity of item  that the customer buy .
 	 *
@@ -44,10 +44,10 @@ public class OrdersItems {
    	 *
    	 * 
    	 */
-    public OrdersItems(int id,int fk_orders,int fk_items,int quantity,double discount) {
+    public OrdersItems(int id,int fk_orders,int fk_items,int quantity,double price) {
     	this.fk_orders=fk_orders;
     	this.fk_items=fk_items;
-    	this.discount=discount;
+    	this.price=price;
     	this.quantity=quantity;
     	this.id=id;
     	
@@ -125,16 +125,16 @@ public class OrdersItems {
    	 *
    	 * 
    	 */
-	public double getDiscount() {
-		return discount;
+	public double getPrice() {
+		return price;
 	}
 	/**
    	 * This method set the value to the discount
    	 *
    	 * 
    	 */
-	public void setDiscount(double discount) {
-		this.discount = discount;
+	public void setPrice(double discount) {
+		this.price = discount;
 	}
      
     
