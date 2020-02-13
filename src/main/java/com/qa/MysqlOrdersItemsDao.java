@@ -25,10 +25,10 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 	 * Constructor initialise the connection variable
 	 * 
 	 */
-	public MysqlOrdersItemsDao()  throws SQLException{
+	public MysqlOrdersItemsDao()  throws SQLException{ 
 	
 	this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
-	//this.connection=DriverManager.getConnection("jdbc:mysql://localhost/IMSdb","root","user123");
+	
 }
 	/**
 	 * Method that create a record in OrderItem table.
@@ -36,7 +36,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 	 */
 	public void create(OrdersItems t) {
 		try {
-			// the mysql insert statement
+			
 			double total;
 			double discount;;
 			if (t.getPrice()* t.getQuantity() > 10000) {
@@ -51,13 +51,13 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 				discount=0;
 			}
 			  String query = "insert into ordersItems (fk_orders_id,fk_items_id,quantity,price) values (?, ?,?,?)";
-		      // create the mysql insert preparedstatement
+		   
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setInt(1,t.getFk_orders()); 
 		      preparedStmt.setInt(2, t.getFk_items());
 		      preparedStmt.setInt(3, t.getQuantity());
 		      preparedStmt.setDouble(4, total);
-		   // execute the preparedstatement
+		  
 		      preparedStmt.executeUpdate();
 		      
 		      System.out.println(" the total is  :" + total + "  the discount is : " + discount);
@@ -65,7 +65,7 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 		      
 		      }catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			
 
 		}
 		
@@ -108,30 +108,51 @@ public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 	 */
 	public void update(OrdersItems t) {
 		try {
-			// the mysql insert statement
-		      String query = "update ordersItems  set quantity=? where ordersItems_id=?";
-		      // create the mysql insert preparedstatement
+			 double total;
+		      String query = "update ordersItems  set quantity=?, price=? where ordersItems_id=?";
+		      
+		      
+		      if (t.getPrice()* t.getQuantity() > 10000) {
+					
+					total = Math.round((t.getPrice()* t.getQuantity()) - (t.getPrice()*10)/100);
+					
+					
+				}
+				else {
+					
+					total = Math.round(t.getPrice()* t.getQuantity()) ;
+					
+				}
+		      
+			      
+		      
+		      
+		      
+		      
+		      
+		      
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setInt(1, t.getQuantity());
-		      preparedStmt.setInt(2, t.getId());
+		      preparedStmt.setDouble(2,total);
+		      preparedStmt.setInt(3, t.getId());
 		      
 		      
-		   // execute the preparedstatement
+		   
 		      preparedStmt.executeUpdate();
 		      }catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			
 
 		}
 		
-	}
+	} 
 
 	/**
 	 * Method delete a record in the ordersItems taqble.
 	 * 
 	 */
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	/**

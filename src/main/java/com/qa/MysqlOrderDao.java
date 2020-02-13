@@ -42,7 +42,7 @@ public class MysqlOrderDao implements Dao<Order>{
 		try {
 			
 		      String query = "insert into orders (fk_customer_id,cost) values (?,?)";
-		      // create the mysql insert preparedstatement
+		     
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setInt(1, t.getFk_customer_id());
 		      preparedStmt.setDouble(2, t.getCost());
@@ -55,7 +55,7 @@ public class MysqlOrderDao implements Dao<Order>{
 
 		}
 		 
-	}  
+	}   
 	/**
 	 * Method that read all orders from order table..
 	 * 
@@ -71,7 +71,7 @@ public class MysqlOrderDao implements Dao<Order>{
 			while (resultSet.next()) {
 			     int id = resultSet.getInt("orders_id");
 				int fk_customer = resultSet.getInt("fk_customer_id");
-				//int quantity=resultSet.getInt("quantity");
+				
 				double price= resultSet.getDouble("cost");
 				orders.add(new Order(id, fk_customer, price)); 
 				
@@ -90,19 +90,18 @@ public class MysqlOrderDao implements Dao<Order>{
 	 */
 	public void update(Order t) {
 		try {
-			// the mysql insert statement
+			
 		      String query = "update orders set cost=? where orders_id=?";
-		      // create the mysql insert preparedstatement
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setDouble(1, t.getCost());
 		      preparedStmt.setInt(2, t.getOrders_id());
 		      
 		      
-		   // execute the preparedstatement
+		   
 		      preparedStmt.executeUpdate();
 		      }catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			
 
 		}
 		
@@ -111,17 +110,17 @@ public class MysqlOrderDao implements Dao<Order>{
 
 	public void delete(int id) {
 		try {
-			// the mysql insert statement
+			
 		      String query = "delete from orders  where orders_id=?";
-		      // create the mysql insert preparedstatement
+		      
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt. setInt(1,id);
 		    	      
-		   // execute the preparedstatement
+		   
 		      preparedStmt.execute();
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			
 
 		}
 		
@@ -135,17 +134,15 @@ public class MysqlOrderDao implements Dao<Order>{
 	    	
     	 int id=0 ;
     	try {
-			// the mysql insert statement
+			
 		      String query = "select max(orders_id) from orders;";
-    		//String query = " SELECT* from Customer";
     		
-		      // create the mysql insert preparedstatement
 		       PreparedStatement preparedStmt= connection.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
 		       preparedStmt.execute();
 	
-//		       ResultSet keys = preparedStmt.getGeneratedKeys();
+
 		       ResultSet keys = preparedStmt.getResultSet();
-//		       keys.next();
+
 		       if(keys.next()) {
 		    	   id = keys.getInt(1);
 		       }
@@ -156,7 +153,7 @@ public class MysqlOrderDao implements Dao<Order>{
 		       
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			 
 
 		} 
     	

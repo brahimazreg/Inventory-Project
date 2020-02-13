@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-//import java.util.AbstractList;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,10 +31,10 @@ private Connection connection;
 	public MysqlCustomerDao()  throws SQLException{
 		
 		this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
-	//	this.connection=DriverManager.getConnection("jdbc:mysql://localhost/IMSdb","root","user123");
+	
 	}
 	
-	//private Connection connection= DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","root","root");
+	
 	
 	/**
 	 * Method that update a customer.
@@ -43,20 +43,20 @@ private Connection connection;
 	
 	public void update(Customer t) {
 
-		// TODO Auto-generated method stub
+		
 		try {
-			// the mysql insert statement
+			
 		      String query = "update Customer set firstName=?,surName=? where id=?";
-		      // create the mysql insert preparedstatement
+		      
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setString(1,t.getFirstName());
 		      preparedStmt.setString(2,t.getSurName());
 		      preparedStmt.setLong(3,t.getId()); 
-		      // execute the preparedstatement
+		      
 		      preparedStmt.execute();
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			 
 
 		} 
 		
@@ -69,20 +69,20 @@ private Connection connection;
 	 */
 	
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		
 		
 		try {
-			// the mysql insert statement
+			
 		      String query = " delete from Customer where id=?";
-		      // create the mysql insert preparedstatement
+		      
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt. setInt(1,id);
 		    	      
-		   // execute the preparedstatement
+		  
 		      preparedStmt.execute();
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			 
 
 		}
 		
@@ -92,22 +92,21 @@ private Connection connection;
 	 * 
 	 */
     public void create(Customer t) {
-		 // PreparedStatement ps =null;
-		 // ResultSet rs = null;
+		
 
 		try {
-			// the mysql insert statement
+			
 		      String query = " insert into Customer (firstName, surName) values (?, ?)";
-		      // create the mysql insert preparedstatement
+		      
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setString (1, t.getFirstName());
 		      preparedStmt.setString  (2, t.getSurName());
 		      
-		   // execute the preparedstatement
+		   
 		      preparedStmt.execute();
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			
 
 		}
 			
@@ -147,17 +146,15 @@ private Connection connection;
     	
     	 int id=0 ;
     	try {
-			// the mysql insert statement
+			
 		      String query = "select max(id) from Customer;";
-    		//String query = " SELECT* from Customer";
     		
-		      // create the mysql insert preparedstatement
 		       PreparedStatement preparedStmt= connection.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
 		       preparedStmt.execute();
 	
-//		       ResultSet keys = preparedStmt.getGeneratedKeys();
+
 		       ResultSet keys = preparedStmt.getResultSet();
-//		       keys.next();
+
 		       if(keys.next()) {
 		    	   id = keys.getInt(1);
 		       }
@@ -168,7 +165,7 @@ private Connection connection;
 		       
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			
 
 		} 
     	

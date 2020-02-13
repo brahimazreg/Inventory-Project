@@ -39,8 +39,7 @@ public static void main(String[] args)  throws SQLException{
 	     op.close();
 	     
 	     
-	   //  insertOrder();
-	//insertOrdersItems();
+	 
 	      
 	     
 }// end method main   
@@ -68,27 +67,27 @@ public static void menu(String str){
 			                option = op.nextInt();
 					switch (option){
 			                    case 1:
-			                            // call insert 
+			                             
 			                    	insertCustomer(); 
 			                            break;
 			                    case 2:
-			                            // call delete 
+			                            
 			                    	deleteCustomer();
 			                            break;
 			                    case 3 :
-			                            // call update
+			                            
 			                    	updateCustomer();
 			                            break;
 			                    case 4 :
 			                    	showCustomers();
 			                    	    break;
 			                    case 5 :
-			                            // call update
+			                            
 			                            System.exit(0);
 			                            break;
 			                   
 			                   default:
-			                            //System.out.println("Please choose an option ?");
+			                            
 			                            break;
 
 					}// end swith
@@ -111,27 +110,27 @@ public static void menu(String str){
 			                option = op.nextInt();
 					switch (option){
 			                    case 1:
-			                           // call insert  
+			                           
 			                    	insertItem();
 			                            break;
 			                    case 2:
-			                            // call delete 
+			                           
 			                    	deletItem();
 			                            break;
 			                    case 3 :
-			                            // call update
+			                         
 			                    	updateItem();
 			                            break;
 			                    case 4 :
 			                    	showItems();
 			                    	    break;
 			                    case 5 :
-			                            // call update
+			                            
 			                            System.exit(0);
 			                            break;
 			                   
 			                   default:
-			                            //System.out.println("Please choose an option ?");
+			                            
 			                            break;
 
 					}// end swith
@@ -157,15 +156,15 @@ public static void menu(String str){
 			                option = op.nextInt();
 					switch (option){
 			                    case 1:
-			                           // call insert  
+			                           
 			                    	insertOrder();
 			                            break;
 			                    case 2:
-			                            // call delete 
+			                          
 			                    	deleteOrder();
 			                            break;
 			                    case 3 :
-			                            // call update
+			                            
 			                    	updateOrder();
 			                            break;
 			                    case 4 :
@@ -182,12 +181,12 @@ public static void menu(String str){
 		                        	updateOrderQuantity();
 		                        	break;
 			                    case 8 :
-			                            // call update
+			                            
 			                            System.exit(0);
 			                            break;
 			                   
 			                   default:
-			                            //System.out.println("Please choose an option ?");
+			                          
 			                            break;
 
 					}// end swith
@@ -233,12 +232,12 @@ public static void menu(String str){
 			 Customer customer = new Customer(0L,firstName,surName);
 			 dao.create(customer);
 			System.out.println(" A new customer has been added !");
-			//JOptionPane.showMessageDialog(null, " A new customer has been added !");
+		
 			scan1.close();
 			scan2.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-		//e.printStackTrace();
+		
+		
 
 	    System.out.println(e.getMessage());
        }
@@ -262,7 +261,7 @@ public static void menu(String str){
 				 System.out.println(" A record  has been deleted !");
 				 scan.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				
 				 System.out.println(e.getMessage()); 
 			}
     	    
@@ -285,7 +284,7 @@ public static void menu(String str){
 	      			
 	      			System.out.println(customer.getId() + "       " + customer.getFirstName()+ "            " + customer.getSurName()) ;
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			 System.out.println(e.getMessage()); 
 		}
    		
@@ -318,7 +317,7 @@ public static void menu(String str){
 				 scan.close();
 				 
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				
 				 System.out.println(e.getMessage()); 
 			}
   	    
@@ -349,11 +348,11 @@ public static void menu(String str){
 			 Item  item = new Item(0,name,price);
 			 dao.create(item);
 			System.out.println(" A new item has been added !");
-			//JOptionPane.showMessageDialog(null, " A new customer has been added !");
+			
 			scan1.close();
 			scan2.close();  
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 		//e.printStackTrace();
 
 	    System.out.println(e.getMessage()); 
@@ -376,7 +375,7 @@ public static void menu(String str){
    	      		for(Item item:items) 
    	      			System.out.println(item.getId() + "            " + item.getItemName()+ "                " +item.getPrice() ) ;
    		} catch (Exception e) {
-   			// TODO Auto-generated catch block
+   			
    			 System.out.println(e.getMessage()); 
    		}
       		 
@@ -411,7 +410,7 @@ public static void menu(String str){
 				 scan.close();
 				 
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+				
 				 System.out.println(e.getMessage()); 
 			}
     	 
@@ -436,7 +435,7 @@ public static void menu(String str){
 				 System.out.println(" A record  has been deleted !");
 				 scan.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				
 				 System.out.println(e.getMessage()); 
 			}
        }  // end delete 
@@ -455,7 +454,7 @@ public static void menu(String str){
 			 System.out.println(" Enter the id of the customer for which you want to add an order "); 
 			 System.out.println();
 			 int id_customer  =scan1.nextInt() ;
-		 showItems();
+		   showItems();
 			
 			 Scanner scan3 = new Scanner(System.in);
 			 System.out.println(" Enter the price for the  item . "); 
@@ -493,7 +492,7 @@ public static void menu(String str){
       	      			
       	      			System.out.println( order.getOrders_id()+ "       " +order.getFk_customer_id() + "             " +order.getCost() ) ;
       		} catch (Exception e) {
-      			// TODO Auto-generated catch block
+      			
       			 System.out.println(e.getMessage()); 
       		}
     	   
@@ -507,8 +506,8 @@ public static void menu(String str){
        public static void updateOrder() {
     	   
     	   showOrders();
-    	   int fk_customer=0; // we update only the price
-    	     // we update only the quantity
+    	   int fk_customer=0; 
+    	     
     	     Scanner scan1 = new Scanner(System.in);
 			 System.out.println(" Enter the id  of the order to update "); 
 			 System.out.println();
@@ -602,7 +601,7 @@ public static void menu(String str){
 			
 			 OrdersItems  orderItem = new OrdersItems(0,order_id,item_id,quantity,price);
 			 dao.create(orderItem);
-			// System.out.println(" An order has been added.");
+			
            
 			
 			 
@@ -613,13 +612,10 @@ public static void menu(String str){
 			 scan4.close();
 	
 			
-			/*
-			for(Order order:myOrder1) {
-				System.out.print(order.getOrders_id());
-			}*/
+			
 			System.out.println("A details order has been added .");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			System.out.println(e.getMessage());
 		}
     	    
@@ -643,7 +639,7 @@ public static void menu(String str){
       	      
       	      			System.out.println( orderItem.getId()+"            " +orderItem.getFk_orders()+ "              " +orderItem.getFk_items()+ "               "+ orderItem.getQuantity()+"          " +orderItem.getPrice() ) ;
       		} catch (Exception e) {
-      			// TODO Auto-generated catch block
+      		
       			 System.out.println(e.getMessage()); 
       		}
     	   
@@ -654,7 +650,7 @@ public static void menu(String str){
     	  
     	   showOrdersDetails();
     	  
-    	     // we update only the quantity
+    	     
     	     Scanner scan1 = new Scanner(System.in);
 			 System.out.println(" Enter the ordersItems for which you want to change the quantity"); 
 			 System.out.println();
@@ -664,15 +660,21 @@ public static void menu(String str){
 			 System.out.println(" Enter the new quantity for the item"); 
 			 System.out.println();
 			 int newQuantity =scan2.nextInt() ;
+			 
+			 Scanner scan3 = new Scanner(System.in);
+			 System.out.println(" Enter the new price for the item"); 
+			 System.out.println();
+			 double newPrice =scan3.nextDouble() ;
 			
 			 
 			 try {
 				 MysqlOrdersItemsDao dao = new MysqlOrdersItemsDao();
-				 OrdersItems orderItem = new OrdersItems(ordersItems_id,0,0,newQuantity,0);
+				 OrdersItems orderItem = new OrdersItems(ordersItems_id,0,0,newQuantity,newPrice);
 				 dao.update(orderItem);
 				 System.out.println("The quantity has been changed");
 				 scan1.close();
 				 scan2.close();
+				 scan3.close();
 			 }
     	     catch (Exception e) {
     	    	 System.out.println(e.getMessage());

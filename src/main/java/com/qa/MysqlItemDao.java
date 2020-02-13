@@ -28,7 +28,7 @@ public class MysqlItemDao implements Dao<Item>{
 		public MysqlItemDao()  throws SQLException{
 		
 		this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
-		//this.connection=DriverManager.getConnection("jdbc:mysql://localhost/IMSdb","root","user123");
+		
 	}
 		/**
 		 * Method that create an item.
@@ -36,24 +36,21 @@ public class MysqlItemDao implements Dao<Item>{
 		 */
 
 	public void create(Item t) {
-		// TODO Auto-generated method stub
-		 // PreparedStatement ps =null;
-		 // ResultSet rs = null;
+		
 
 		try {
-			// the mysql insert statement
+			
 		      String query = "insert into items (items_name, price) values (?, ?)";
-		      // create the mysql insert preparedstatement
+		      
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setString (1, t.getItemName());
 		      preparedStmt.setDouble(2, t.getPrice());
 		      
-		   // execute the preparedstatement
+		   
 		      preparedStmt.executeUpdate();
 		      }catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
-
+			 
 		}
 		  
 	} 
@@ -93,18 +90,18 @@ public class MysqlItemDao implements Dao<Item>{
 	public void update(Item t) {
 		
 		try {
-			// the mysql insert statement
+			
 		      String query = "update items set items_name=?,price=?  where items_id=?";
-		      // create the mysql insert preparedstatement
+		     
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt.setString(1,t.getItemName());
 		      preparedStmt.setDouble(2,t.getPrice());
 		      preparedStmt.setLong(3,t.getId()); 
-		      // execute the preparedstatement
+		      
 		      preparedStmt.execute();
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			 
 
 		} 
 		
@@ -119,17 +116,17 @@ public class MysqlItemDao implements Dao<Item>{
 	public void delete(int id) {
 
 		try {
-			// the mysql insert statement
+			
 		      String query = " delete from items where items_id=?";
-		      // create the mysql insert preparedstatement
+		     
 		      PreparedStatement preparedStmt= connection.prepareStatement(query);
 		      preparedStmt. setInt(1,id);
 		    	      
-		   // execute the preparedstatement
+		   
 		      preparedStmt.execute();
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			 
 
 		}
 		
@@ -145,17 +142,17 @@ public class MysqlItemDao implements Dao<Item>{
 	    	
     	 int id=0 ;
     	try {
-			// the mysql insert statement
+			
 		      String query = "select max(items_id) from items;";
-    		//String query = " SELECT* from Customer";
     		
-		      // create the mysql insert preparedstatement
+    		
+		      
 		       PreparedStatement preparedStmt= connection.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
 		       preparedStmt.execute();
 	
-//		       ResultSet keys = preparedStmt.getGeneratedKeys();
+
 		       ResultSet keys = preparedStmt.getResultSet();
-//		       keys.next();
+
 		       if(keys.next()) {
 		    	   id = keys.getInt(1);
 		       }
@@ -166,7 +163,7 @@ public class MysqlItemDao implements Dao<Item>{
 		       
 		}catch (Exception e) { 
 			System.out.println(e.getMessage());
-			 //System.err.println(e.getMessage());
+			 
 
 		} 
     	
