@@ -9,11 +9,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * This class allow the communication with the database.
- * Implements the Dao interface.
- * 
- */
+	/**
+	 * This class allow the communication with the database.
+	 * Implements the Dao interface.
+	 * 
+	 */
 public class MysqlItemDao implements Dao<Item>{
 	/**
 	 * @connection variable used to make connection with the database..
@@ -30,10 +30,10 @@ public class MysqlItemDao implements Dao<Item>{
 		this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
 		
 	}
-		/**
-		 * Method that create an item.
-		 * 
-		 */
+	/**
+	 * Method that create an item.
+	 * 
+	 */
 
 	public void create(Item t) {
 		
@@ -107,7 +107,7 @@ public class MysqlItemDao implements Dao<Item>{
 		
 
 				
-	}//end update item
+	}
 
 	/**
 	 * this method delete an item from item table
@@ -130,10 +130,10 @@ public class MysqlItemDao implements Dao<Item>{
 
 		}
 		
-	}// end delete item
+	}
 	
 	
-	//********************************
+	
 	/**
 	 * this method get the id of the last reord inserted.
 	 * 

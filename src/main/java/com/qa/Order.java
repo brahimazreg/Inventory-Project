@@ -1,11 +1,11 @@
 package com.qa;
 
 
-/**
- * This is  order class. 
- * 
- * 
- */
+	/**
+	 * This is  order class. 
+	 * 
+	 * 
+	 */
 public class Order {
 	/**
 	 * @orders_id identify a record in order table.. 

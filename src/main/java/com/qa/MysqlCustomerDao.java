@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * This class allow the communication with the database.
- * Implements the Dao interface.
- * 
- */
+	/**
+	 * This class allow the communication with the database.
+	 * Implements the Dao interface.
+	 * 
+	 */
 public class MysqlCustomerDao implements Dao<Customer>{
 	/**
 	 * @connection variable used to make connection with the database..
@@ -24,10 +24,10 @@ public class MysqlCustomerDao implements Dao<Customer>{
 private Connection connection;
 	
 	
-/**
- * Constructor initialise the connection variable
- * 
- */	
+	/**
+	 * Constructor initialise the connection variable
+	 * 
+	 */	
 	public MysqlCustomerDao()  throws SQLException{
 		
 		this.connection=DriverManager.getConnection("jdbc:mysql://34.76.219.229:3306/IMS","Brahim","user123");
@@ -61,7 +61,7 @@ private Connection connection;
 		} 
 		
 		
-	}// end update 
+	}
 
 	/**
 	 * This method delete a customer.
@@ -86,7 +86,7 @@ private Connection connection;
 
 		}
 		
-	}// end delete
+	}
 	/**
 	 * This method create a customer.
 	 * 
@@ -111,7 +111,7 @@ private Connection connection;
 		}
 			
 		
-	}// end create 
+	} 
     
     /**
 	 * This method read all customer .
@@ -136,7 +136,7 @@ private Connection connection;
 		 System.out.println(e.getMessage());
 	} 
 	return customers;
-}// end readAll
+}
 
     /**
 	 * This method retreive the last id in a table

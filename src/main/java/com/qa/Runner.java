@@ -42,18 +42,18 @@ public static void main(String[] args)  throws SQLException{
 	 
 	      
 	     
-}// end method main   
-
-//******************************** sub menu 
+}   
 
 
-/**
- * this function manage the submenu customer, submenu item , submenu order
- * 
- * 
- */
+
+
+	/**
+	 * this function manage the submenu customer, submenu item , submenu order
+	 * 
+	 * 
+	 */
 public static void menu(String str){
-	//***************     manage customer ************************
+	
 		if(str.equals("customer")){ 
 			 int option;
 			   do {		    
@@ -90,12 +90,12 @@ public static void menu(String str){
 			                            
 			                            break;
 
-					}// end swith
+					}
 			  }while(option <1  || option > 5);	// end do
 			
-		}// end if customer
+		}
 		
-		//***************************   Manage item    *************************
+		
 		
 		if(str.equals("item")){
 			 int option;
@@ -133,12 +133,12 @@ public static void menu(String str){
 			                            
 			                            break;
 
-					}// end swith
-			  }while(option <1  || option > 5);	// end do
+					}
+			  }while(option <1  || option > 5);	
 			
-		}// end if item
+		}
 		
-		//****************************   Manage order    *****************************************
+		
 		
 		if(str.equals("order")){
 			 int option;
@@ -189,16 +189,16 @@ public static void menu(String str){
 			                          
 			                            break;
 
-					}// end swith
-			  }while(option <1  || option > 8);	// end do
+					}
+			  }while(option <1  || option > 8);	
 			
-		}// end if order
+		}
 		
 		
 		
 		
 		
-	}// end  method menu 
+	} 
 	
 
 
@@ -207,15 +207,15 @@ public static void menu(String str){
 
 
 
-//************************  end sub menu  *****************************************
 
 
-//---------------------  Manage  customers   ------------------------------------------------  
-/**
- * this method insert a new customern
- * 
- * 
- */      
+
+ 
+	/**
+	 * this method insert a new customern
+	 * 
+	 * 
+	 */      
 
 
        public static  void insertCustomer()  { 
@@ -242,7 +242,7 @@ public static void menu(String str){
 	    System.out.println(e.getMessage());
        }
     	    
-       } // end insert
+       } 
        /**
         * this method delete a customer
         * 
@@ -266,7 +266,7 @@ public static void menu(String str){
 			}
     	    
     	   
-       } // end delete
+       }
    
        /**
         * this method shows all customers
@@ -288,7 +288,7 @@ public static void menu(String str){
 			 System.out.println(e.getMessage()); 
 		}
    		
-   		}// end of show customers
+   		}
        
      
        /**
@@ -322,10 +322,10 @@ public static void menu(String str){
 			}
   	    
   	   
-     } // end update customer
+     } 
  
        
-       //--------------------- Manage items   ------------------------------------------------     
+          
        
        /**
         * this method insert a new item
@@ -353,12 +353,12 @@ public static void menu(String str){
 			scan2.close();  
 		} catch (Exception e) {
 			
-		//e.printStackTrace();
+		
 
 	    System.out.println(e.getMessage()); 
        }  
     	    
-       } // end insert item
+       }
        
        /**
         * this method show all items
@@ -379,7 +379,7 @@ public static void menu(String str){
    			 System.out.println(e.getMessage()); 
    		}
       		 
-      		}// end of show items
+      		}
 
        /**
         * this method update an item
@@ -416,7 +416,7 @@ public static void menu(String str){
     	 
        
     	   
-       }// end update item
+       }
        
        /**
         * this method delete an item
@@ -438,9 +438,9 @@ public static void menu(String str){
 				
 				 System.out.println(e.getMessage()); 
 			}
-       }  // end delete 
+       }   
        
-     //------------------------------   Manage Orders ---------------------------------------------
+     
 
        /**
         * this method insert an order
@@ -475,7 +475,7 @@ public static void menu(String str){
  	     catch ( Exception e) {
  	    	 System.out.println(e.getMessage());
  	     }
-       }  // end insert order
+       }  
        
        /**
         * this method show all orders
@@ -496,7 +496,7 @@ public static void menu(String str){
       			 System.out.println(e.getMessage()); 
       		}
     	   
-       }// end show orders
+       }
        
        /**
         * this method update an order
@@ -530,7 +530,7 @@ public static void menu(String str){
     	    	 System.out.println(e.getMessage());
     	     }
     	   
-       }// end updateorder
+       }
         
        /**
         * this method delete an order
@@ -558,7 +558,7 @@ public static void menu(String str){
     	   
        }
        
-   //---------------------   Manage OrdersItems  --------------------------------------------
+   
        /**
         * this method insert a detail of an order
         * 
@@ -623,7 +623,7 @@ public static void menu(String str){
     	   
     	   
     	     
-       }// end ordersItems   
+       }   
        
        /**
         * this method show all record in ordersItems tabld       * 
@@ -643,7 +643,7 @@ public static void menu(String str){
       			 System.out.println(e.getMessage()); 
       		}
     	   
-       }// end showOrdersDetails
+       }
        
        
        public static void updateOrderQuantity() {
@@ -683,7 +683,7 @@ public static void menu(String str){
        }
        
        
-}// end class
+}
 
 
 

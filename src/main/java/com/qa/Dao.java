@@ -3,10 +3,10 @@ package com.qa;
 
 import java.util.List;
 
-/**
- *
- * @author brahim
- */
+	/**
+	 *
+	 * @author brahim
+	 */
 public interface Dao<T> {
 	/**
 	 * Method create a new record accepte a generic parameter 

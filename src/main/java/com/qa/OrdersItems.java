@@ -1,12 +1,12 @@
 package com.qa;
 
 
-
-/**
- * we create this class because we have relation many to many between the item table and order table.
- *
- * 
- */
+	
+	/**
+	 * we create this class because we have relation many to many between the item table and order table.
+	 *
+	 * 
+	 */
 public class OrdersItems {
 	/**
 	 * @id identify each record in ordersitems table.

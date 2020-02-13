@@ -1,10 +1,10 @@
 package com.qa;
 
 public class Item {
-	  /**
-		 * @id  identify a record in the item table.
-		 * 
-		 */
+    /**
+	 * @id  identify a record in the item table.
+	 * 
+	 */
 	private int id;
 	/**
 	 * @itemName the name of the item.

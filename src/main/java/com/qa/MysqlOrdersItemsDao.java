@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * This class allow the communication with the database.
- * Implements the Dao interface.
- * 
- */
+	/**
+	 * This class allow the communication with the database.
+	 * Implements the Dao interface.
+	 * 
+	 */
 public class MysqlOrdersItemsDao implements Dao<OrdersItems> {
 	/**
 	 * @connection variable used to make connection with the database..
