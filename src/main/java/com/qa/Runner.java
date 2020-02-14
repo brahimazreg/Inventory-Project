@@ -343,7 +343,7 @@ public class Runner {
 						item.getId() + "            " + item.getItemName() + "                " + item.getPrice());
 		} catch (Exception e) {
 
-			LOGGER.info(e.getMessage());
+			LOGGER.info(e.getMessage()); 
 		}
 
 	}

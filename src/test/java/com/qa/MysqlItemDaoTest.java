@@ -14,8 +14,8 @@ public class MysqlItemDaoTest {
 	public void testCreate() {
 		try {
 			MysqlItemDao myDao = new MysqlItemDao();
-			int id  = myDao.getLastId();
-			Item item = new Item(id,"test",100.99);
+			//int id  = myDao.getLastId();
+			Item item = new Item(0,"test",100.99);
 			myDao.create(item);
 			assertEquals("test", myDao.readAll().get(myDao.readAll().size()-1).itemName);
 		} catch (SQLException e) {
@@ -45,7 +45,7 @@ public class MysqlItemDaoTest {
 		}
 	}
 
-	
+	@ignore
 	@Test
 	public void testDelete() {
 		try {
