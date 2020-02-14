@@ -45,7 +45,7 @@ public class MysqlItemDaoTest {
 		}
 	}
 
-	@ignore
+	@Ignore
 	@Test
 	public void testDelete() {
 		try {
