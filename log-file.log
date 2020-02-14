@@ -847,3 +847,9 @@
 2020-02-14 09:18:15 INFO  MysqlItemDao:149 - Last Key: 85
 2020-02-14 09:18:15 INFO  MysqlItemDao:149 - Last Key: 84
 2020-02-14 09:18:15 INFO  MysqlItemDao:149 - Last Key: 84
+2020-02-14 09:53:53 INFO  MysqlOrderDao:57 - Cannot add or update a child row: a foreign key constraint fails (`IMS`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`fk_customer_id`) REFERENCES `Customer` (`id`))
+2020-02-14 09:53:53 INFO  MysqlOrderDao:153 - Last Key: 26
+2020-02-14 09:56:52 INFO  MysqlOrderDao:153 - Last Key: 26
+2020-02-14 09:56:52 INFO  MysqlOrderDao:57 - Cannot add or update a child row: a foreign key constraint fails (`IMS`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`fk_customer_id`) REFERENCES `Customer` (`id`))
+2020-02-14 09:56:52 INFO  MysqlOrderDao:153 - Last Key: 26
+2020-02-14 10:03:06 INFO  MysqlOrderDao:153 - Last Key: 26
